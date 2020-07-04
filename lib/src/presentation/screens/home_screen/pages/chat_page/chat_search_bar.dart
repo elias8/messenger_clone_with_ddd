@@ -10,7 +10,7 @@ class ChatSearchBar extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 16),
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
-        color: Colors.grey[100],
+        color: Colors.grey.withOpacity(.5),
         borderRadius: BorderRadius.circular(24),
       ),
       child: Row(

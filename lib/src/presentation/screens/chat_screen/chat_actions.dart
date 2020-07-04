@@ -7,6 +7,7 @@ class ChatActions extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomAppBar(
       elevation: 8,
+      color: context.theme.primaryColor,
       child: Container(
         height: 48,
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -30,13 +31,13 @@ class ChatActions extends StatelessWidget {
                       filled: true,
                       hintText: 'Aa',
                       border: InputBorder.none,
-                      fillColor: Colors.grey[300],
                       errorBorder: InputBorder.none,
                       focusedBorder: InputBorder.none,
                       enabledBorder: InputBorder.none,
                       disabledBorder: InputBorder.none,
                       focusedErrorBorder: InputBorder.none,
                       suffixIcon: Icon(Icons.tag_faces),
+                      fillColor: Colors.grey.withOpacity(.5),
                       contentPadding: const EdgeInsets.only(left: 12, top: 4),
                     ),
                   ),

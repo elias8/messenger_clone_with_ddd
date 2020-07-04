@@ -6,6 +6,7 @@ class HomeScreenBottomNavigationBar extends StatelessWidget {
     return SizedBox(
       height: 60,
       child: BottomAppBar(
+        color: context.theme.primaryColor,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Row(

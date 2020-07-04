@@ -10,7 +10,7 @@ class CircularIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       foregroundColor: Theme.of(context).iconTheme.color,
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Colors.grey.withOpacity(0.5),
       radius: size,
       child: child,
     );
