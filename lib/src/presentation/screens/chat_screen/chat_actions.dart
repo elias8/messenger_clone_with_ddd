@@ -12,13 +12,13 @@ class ChatActions extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Row(
           children: <Widget>[
-            Icon(Icons.menu),
+            const Icon(Icons.menu),
             const SizedBox(width: 16),
-            Icon(Icons.camera_alt),
+            const Icon(Icons.camera_alt),
             const SizedBox(width: 16),
-            Icon(Icons.photo),
+            const Icon(Icons.photo),
             const SizedBox(width: 16),
-            Icon(Icons.keyboard_voice),
+            const Icon(Icons.keyboard_voice),
             const SizedBox(width: 16),
             Expanded(
               child: SizedBox(

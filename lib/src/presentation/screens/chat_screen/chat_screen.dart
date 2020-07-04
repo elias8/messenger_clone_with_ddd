@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../presentation.dart';
+import '../screens.dart';
 
 part 'chat_actions.dart';
 part 'chat_detail.dart';
@@ -35,7 +35,7 @@ class ChatScreen extends StatelessWidget {
       body: Column(
         children: <Widget>[
           ChatDetail(),
-          ChatActions(),
+          const ChatActions(),
         ],
       ),
     );
