@@ -9,9 +9,25 @@ dependencies:
   flutter:
     sdk: flutter
 
+  cubit: 0.0.7
+  flutter_cubit: 0.0.8
+  dartz: ^0.9.1
+  freezed_annotation: ^0.11.0
+  derry: ^0.1.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  freezed: ^0.11.2
+  mockito: ^4.1.1
+  build_runner: ^1.10.0
+
 flutter:
   uses-material-design: true
+
+scripts:
+  build: flutter pub run build_runner build
+  watch: flutter pub run build_runner watch
+  buildC: flutter pub run build_runner build --delete-conflicting-outputs
+  watchC: flutter pub run build_runner watch --delete-conflicting-outputs
