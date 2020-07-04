@@ -1,0 +1,15 @@
+analyzer:
+  exclude: [build/**]
+
+linter:
+  rules:
+    - camel_case_types
+    - avoid_empty_else
+    - lines_longer_than_80_chars
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - prefer_single_quotes
+    - camel_case_extensions
+    - cancel_subscriptions
+    - file_names
+    - sort_pub_dependencies
