@@ -6,9 +6,9 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
       theme: AppTheme.lightTheme(),
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: Router().onGenerateRoute,
     );
   }
 }
