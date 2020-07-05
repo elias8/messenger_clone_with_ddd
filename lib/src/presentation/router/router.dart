@@ -5,31 +5,28 @@ class Router {
   static const initialScreen = '/';
   static const homeScreen = 'homeScreen';
   static const chatScreen = 'chatScreen';
+  static const profileScreen = 'profileScreen';
 
   Route onGenerateRoute(RouteSettings settings) {
     final name = settings.name;
-    if (name == initialScreen) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => HomeScreen(),
-        settings: settings,
-      );
-    } else if (name == homeScreen) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => HomeScreen(),
+    if (name == homeScreen) {
+      return MaterialPageRoute(
+        builder: (context) => const HomeScreen(),
         settings: settings,
       );
     } else if (name == chatScreen) {
-      return MaterialPageRoute<dynamic>(
+      return MaterialPageRoute(
         builder: (context) => ChatScreen(),
         settings: settings,
       );
+    } else if (name == profileScreen) {
+      return MaterialPageRoute(
+        builder: (context) => const ProfileScreen(),
+        settings: settings,
+      );
     } else {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => Container(
-          child: const Center(
-            child: const Text('Route Not Found!!'),
-          ),
-        ),
+      return MaterialPageRoute(
+        builder: (context) => const HomeScreen(),
         settings: settings,
       );
     }

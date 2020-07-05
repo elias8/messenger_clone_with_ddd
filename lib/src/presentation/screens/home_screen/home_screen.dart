@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../presentation.dart';
 import 'pages/pages.dart';
 
 part 'bottom_bar.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +28,4 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: HomeScreenBottomNavigationBar(),
     );
   }
-}
-
-extension ThemeExtension on BuildContext {
-  ThemeData get theme => Theme.of(this);
 }
