@@ -7,7 +7,10 @@ class ChatPageAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      leading: Icon(Icons.person),
+      leading: IconButton(
+        icon: Icon(Icons.person),
+        onPressed: () => Navigator.pushNamed(context, Router.profileScreen),
+      ),
       title: const Text('Chats'),
       actions: <Widget>[
         const CircularIcon(child: Icon(Icons.camera_alt)),
