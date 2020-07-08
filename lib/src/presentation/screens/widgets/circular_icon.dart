@@ -15,7 +15,7 @@ class CircularIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      backgroundColor: color ?? Colors.grey.withOpacity(0.5),
+      backgroundColor: color ?? AppColors.fadeBackGroundColor,
       foregroundColor: Theme.of(context).iconTheme.color,
       radius: size,
       child: child,

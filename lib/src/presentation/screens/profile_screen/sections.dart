@@ -20,7 +20,7 @@ class ProfileScreenSection extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
           child: Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.grey,
             ),
           ),

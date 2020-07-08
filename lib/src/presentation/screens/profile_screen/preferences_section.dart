@@ -59,9 +59,9 @@ class PreferencesSection extends StatelessWidget {
           ),
           ListTile(
             onTap: () {},
-            leading: CircularIcon(
+            leading: const CircularIcon(
               color: Colors.deepPurple,
-              child: const Icon(Icons.photo),
+              child: Icon(Icons.photo),
             ),
             title: const Text('Photos & Media'),
           ),

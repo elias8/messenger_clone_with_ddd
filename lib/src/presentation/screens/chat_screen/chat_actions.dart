@@ -37,7 +37,7 @@ class ChatActions extends StatelessWidget {
                       disabledBorder: InputBorder.none,
                       focusedErrorBorder: InputBorder.none,
                       suffixIcon: Icon(Icons.tag_faces),
-                      fillColor: Colors.grey.withOpacity(.5),
+                      fillColor: AppColors.fadeBackGroundColor,
                       contentPadding: const EdgeInsets.only(left: 12, top: 4),
                     ),
                   ),

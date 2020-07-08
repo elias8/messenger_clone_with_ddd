@@ -9,14 +9,8 @@ part 'chat_detail.dart';
 class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const iconTheme = IconThemeData(color: Colors.blue);
     return Theme(
-      data: context.theme.copyWith(
-        iconTheme: iconTheme,
-        appBarTheme: context.theme.appBarTheme.copyWith(
-          iconTheme: iconTheme,
-        ),
-      ),
+      data: IconThemes.blueIconsTheme(context),
       child: Scaffold(
         appBar: AppBar(
           leading: const BackButton(),

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../presentation.dart';
 
-part 'buttons.dart';
+part 'dark_mode_section.dart';
 part 'preferences_section.dart';
+part 'profile_image_and_name_section.dart';
 part 'profile_section.dart';
 part 'sections.dart';
 
@@ -13,8 +14,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: context.theme
-          .copyWith(iconTheme: const IconThemeData(color: Colors.white)),
+      data: IconThemes.whiteIconsTheme(context),
       child: Scaffold(
         appBar: AppBar(
           leading: const BackButton(),
@@ -22,22 +22,8 @@ class ProfileScreen extends StatelessWidget {
         ),
         body: ListView(
           children: <Widget>[
-            const SizedBox(height: 8),
-            CircularIcon(
-              size: 40,
-              child: Icon(Icons.person, size: 56),
-            ),
-            const SizedBox(height: 16),
-            Center(
-              child: Text(
-                'Elias Andualem',
-                style: context.theme.appBarTheme.textTheme.headline6,
-              ),
-            ),
-            const SizedBox(height: 24),
-            const DarkModeButton(),
-            const SizedBox(height: 16),
-            const MessageRequestButton(),
+            const ProfileImageAndNameSection(),
+            const DarkModeSection(),
             const ProfileSection(),
             const PreferencesSection(),
             const SizedBox(height: 8),

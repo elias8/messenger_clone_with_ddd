@@ -6,11 +6,11 @@ class ChatSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 48,
+      height: 44,
       margin: const EdgeInsets.symmetric(horizontal: 16),
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
-        color: Colors.grey.withOpacity(.5),
+        color: AppColors.fadeBackGroundColor,
         borderRadius: BorderRadius.circular(24),
       ),
       child: Row(

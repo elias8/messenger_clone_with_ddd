@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+part 'colors.dart';
+
 class AppTheme {
   static ThemeData darkTheme() {
     return ThemeData.dark().copyWith(
@@ -44,6 +46,29 @@ class AppTheme {
         iconTheme: const IconThemeData(color: Colors.black),
         brightness: Brightness.light,
       ),
+    );
+  }
+}
+
+class IconThemes {
+  static blueIconsAndAppBarTheme(BuildContext context) {
+    return Theme.of(context).copyWith(
+      iconTheme: IconThemeData(color: Colors.blue),
+      appBarTheme: Theme.of(context).appBarTheme.copyWith(
+            iconTheme: IconThemeData(color: Colors.blue),
+          ),
+    );
+  }
+
+  static blueIconsTheme(BuildContext context) {
+    return Theme.of(context).copyWith(
+      iconTheme: IconThemeData(color: Colors.blue),
+    );
+  }
+
+  static whiteIconsTheme(BuildContext context) {
+    return Theme.of(context).copyWith(
+      iconTheme: const IconThemeData(color: Colors.white),
     );
   }
 }

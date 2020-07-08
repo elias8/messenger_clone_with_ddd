@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import 'src/presentation/presentation.dart';
@@ -8,7 +9,7 @@ class Application extends StatelessWidget {
     return MaterialApp(
       theme: AppTheme.lightTheme(),
       debugShowCheckedModeBanner: false,
-      onGenerateRoute: Router().onGenerateRoute,
+      builder: ExtendedNavigator<Router>(router: Router()),
     );
   }
 }

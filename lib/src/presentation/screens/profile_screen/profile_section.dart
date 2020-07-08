@@ -9,8 +9,29 @@ class ProfileSection extends StatelessWidget {
       title: 'Profile',
       child: Column(
         children: <Widget>[
-          const ActiveStatusButton(),
-          const UsernameButton(),
+          ListTile(
+            onTap: () {},
+            leading: CircularIcon(
+              color: Colors.green,
+              child: Icon(Icons.brightness_1),
+            ),
+            title: const Text('Active Status'),
+            subtitle: const Text('On'),
+          ),
+          ListTile(
+            onTap: () {},
+            leading: const CircularIcon(
+              color: Colors.red,
+              child: Text(
+                '@',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            title: const Text('Username'),
+            subtitle: const Text('m.me/elias.andualem'),
+          )
         ],
       ),
     );
