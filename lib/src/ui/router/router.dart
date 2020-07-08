@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route/auto_route_annotations.dart';
 import 'package:flutter/material.dart';
-import 'package:messenger_clone/src/presentation/presentation.dart';
+import 'package:messenger_clone/src/ui/ui.dart';
 
 @MaterialAutoRouter()
 class $Router {

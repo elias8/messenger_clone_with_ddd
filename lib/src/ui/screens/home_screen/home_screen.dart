@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../presentation.dart';
+import '../../ui.dart';
 import 'pages/pages.dart';
 
 part 'bottom_bar.dart';

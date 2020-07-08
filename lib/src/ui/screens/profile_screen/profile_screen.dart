@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../presentation.dart';
+import '../../ui.dart';
 
 part 'dark_mode_section.dart';
 part 'preferences_section.dart';

@@ -7,9 +7,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:messenger_clone/src/presentation/screens/home_screen/home_screen.dart';
-import 'package:messenger_clone/src/presentation/screens/chat_screen/chat_screen.dart';
-import 'package:messenger_clone/src/presentation/screens/profile_screen/profile_screen.dart';
+import 'package:messenger_clone/src/ui/screens/home_screen/home_screen.dart';
+import 'package:messenger_clone/src/ui/screens/chat_screen/chat_screen.dart';
+import 'package:messenger_clone/src/ui/screens/profile_screen/profile_screen.dart';
 
 abstract class Routes {
   static const homeScreen = '/';

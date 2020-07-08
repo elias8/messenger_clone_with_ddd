@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../presentation.dart';
+import '../../ui.dart';
 import '../screens.dart';
 
 part 'chat_actions.dart';

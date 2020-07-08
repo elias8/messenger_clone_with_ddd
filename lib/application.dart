@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import 'src/presentation/presentation.dart';
+import 'src/ui/ui.dart';
 
 class Application extends StatelessWidget {
   @override
