@@ -7,7 +7,7 @@ class PeoplePageAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      leading: Icon(Icons.person),
+      leading: const AppBarProfilePic(),
       title: const Text('People'),
       actions: <Widget>[
         const CircularIcon(child: Icon(Icons.perm_contact_calendar)),

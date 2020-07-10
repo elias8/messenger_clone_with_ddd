@@ -18,6 +18,8 @@ class DependencyInjector {
   static Future<void> _injectDomainLayer() async {}
 
   static Future<void> _injectPresentationLayer() async {
-    getIt..registerFactory(() => ThemeCubit());
+    getIt
+      ..registerFactory(() => ThemeCubit())
+      ..registerFactory(() => HomePageCubit());
   }
 }

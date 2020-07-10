@@ -40,7 +40,8 @@ class Router extends RouterBase {
         }
         final typedArgs = args as HomeScreenArguments ?? HomeScreenArguments();
         return MaterialPageRoute<dynamic>(
-          builder: (context) => HomeScreen(key: typedArgs.key),
+          builder: (context) =>
+              HomeScreen(key: typedArgs.key).wrappedRoute(context),
           settings: settings,
         );
       case Routes.chatScreen:

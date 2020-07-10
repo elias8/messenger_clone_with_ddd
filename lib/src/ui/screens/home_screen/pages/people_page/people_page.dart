@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:messenger_clone/src/src.dart';
 
 import '../../../screens.dart';
 
 part 'app_bar.dart';
+part 'page_tab_bar.dart';
+part 'tab_bar_button.dart';
 
 class PeoplePage extends StatelessWidget {
   @override
@@ -17,36 +20,6 @@ class PeoplePage extends StatelessWidget {
             controller: PageController(initialPage: 0),
             children: <Widget>[],
           ),
-        ),
-      ],
-    );
-  }
-}
-
-class PeoplePageTabBar extends StatelessWidget {
-  const PeoplePageTabBar({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width / 2.5;
-    return Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget>[
-        Container(
-          height: 28,
-          decoration: BoxDecoration(
-            color: Colors.grey[100],
-            borderRadius: BorderRadius.circular(24),
-          ),
-          constraints: BoxConstraints(minWidth: width),
-          alignment: FractionalOffset.center,
-          child: const Text('ACTIVE'),
-        ),
-        Container(
-          constraints: BoxConstraints(minWidth: width),
-          child: const Text('STORIES'),
-          alignment: FractionalOffset.center,
         ),
       ],
     );
