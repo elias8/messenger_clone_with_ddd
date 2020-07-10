@@ -8,25 +8,7 @@ class DarkModeSection extends StatelessWidget {
     return Column(
       children: <Widget>[
         const SizedBox(height: 24),
-        ListTile(
-          onTap: () {},
-          leading: CircularIcon(
-            color: context.theme.isDarkTheme ? null : Colors.black,
-            child: Transform.rotate(
-              angle: 90,
-              child: Icon(
-                Icons.brightness_2,
-                color: Colors.white,
-              ),
-            ),
-          ),
-          title: const Text('Dark Mode'),
-          trailing: Switch(
-            value: true,
-            onChanged: (v) {},
-            activeColor: Colors.grey,
-          ),
-        ),
+        const DarkModeButton(),
         const SizedBox(height: 16),
         ListTile(
           onTap: () {},

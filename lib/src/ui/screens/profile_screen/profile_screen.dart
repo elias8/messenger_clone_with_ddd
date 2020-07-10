@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cubit/flutter_cubit.dart';
 
 import '../../ui.dart';
 
 part 'dark_mode_section.dart';
+part 'dark_theme_button.dart';
 part 'preferences_section.dart';
 part 'profile_image_and_name_section.dart';
 part 'profile_section.dart';
