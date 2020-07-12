@@ -1,4 +1,4 @@
-part of '../sign_up.dart';
+part of 'sign_up.dart';
 
 class PasswordConfirmation
     implements Validatable<PasswordValidationError, String> {
@@ -14,16 +14,12 @@ class PasswordConfirmation
         _confirmation = confirmation;
 
   @override
-  Either<PasswordValidationError, Unit> get error {
-    print('$_password $_confirmation');
-    return _passwordDoNotMatch()
-        ? left(const PasswordConfirmationError())
-        : right(unit);
-  }
+  Either<PasswordValidationError, Unit> get error => _passwordDoNotMatch()
+      ? left(const PasswordConfirmationError())
+      : right(unit);
 
   @override
-  Either<String, Unit> get value =>
-      isValid() ? left(_confirmation) : right(unit);
+  Either<String, Unit> get value => left(_confirmation);
 
   @override
   bool isValid() => _password == _confirmation;

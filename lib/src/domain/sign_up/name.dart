@@ -1,4 +1,4 @@
-part of '../sign_up.dart';
+part of 'sign_up.dart';
 
 class Name implements Validatable<NameValidationError, String> {
   static const maxNameLength = 15;

@@ -1,4 +1,4 @@
-part of '../sign_up.dart';
+part of 'sign_up.dart';
 
 class Password implements Validatable<PasswordValidationError, String> {
   static const minPasswordLength = 6;

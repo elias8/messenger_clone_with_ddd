@@ -1,4 +1,4 @@
-part of '../sign_up.dart';
+part of 'sign_up.dart';
 
 class EmailAddress implements Validatable<EmailValidationError, String> {
   static const emailRegex =
