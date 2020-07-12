@@ -1,7 +1,7 @@
 part of 'sign_up.dart';
 
 class PasswordConfirmation
-    implements Validatable<PasswordValidationError, String> {
+    extends ValidatableValueObject<PasswordValidationError, String> {
   final String _password;
   final String _confirmation;
 
@@ -11,18 +11,16 @@ class PasswordConfirmation
   )   : assert(password != null),
         assert(confirmation != null),
         _password = password,
-        _confirmation = confirmation;
+        _confirmation = confirmation,
+        super(confirmation);
 
   @override
-  Either<PasswordValidationError, Unit> get error => _passwordDoNotMatch()
-      ? left(const PasswordConfirmationError())
-      : right(unit);
+  Either<PasswordValidationError, Unit> get error => _passwordMatches()
+      ? right(unit)
+      : left(const PasswordConfirmationError());
 
   @override
-  Either<String, Unit> get value => left(_confirmation);
+  bool isValid() => _passwordMatches();
 
-  @override
-  bool isValid() => _password == _confirmation;
-
-  bool _passwordDoNotMatch() => _password != _confirmation;
+  bool _passwordMatches() => _password == _confirmation;
 }

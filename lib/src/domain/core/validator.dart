@@ -10,9 +10,5 @@ bool validateList(List<Validatable> validators) {
 abstract class Validatable<Failure, T> {
   Either<Failure, Unit> get error;
 
-  Either<T, Unit> get value;
-
   bool isValid();
 }
-
-

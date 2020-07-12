@@ -1,13 +1,14 @@
 part of 'sign_up.dart';
 
-class Name implements Validatable<NameValidationError, String> {
+class Name extends ValidatableValueObject<NameValidationError, String> {
   static const maxNameLength = 15;
   static const minNameLength = 3;
   final String _name;
 
   const Name(String name)
       : assert(name != null),
-        _name = name;
+        _name = name,
+        super(name);
 
   @override
   Either<NameValidationError, Unit> get error {
@@ -25,9 +26,6 @@ class Name implements Validatable<NameValidationError, String> {
   }
 
   @override
-  Either<String, Unit> get value => isValid() ? left(_name) : right(unit);
-
-  @override
   bool isValid() {
     if (_name.length < minNameLength || _name.length > maxNameLength) {
       return false;
@@ -35,7 +33,4 @@ class Name implements Validatable<NameValidationError, String> {
       return true;
     }
   }
-
-  @override
-  String toString() => 'Name{_name: $_name}';
 }

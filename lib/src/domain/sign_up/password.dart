@@ -1,6 +1,6 @@
 part of 'sign_up.dart';
 
-class Password implements Validatable<PasswordValidationError, String> {
+class Password extends ValidatableValueObject<PasswordValidationError, String> {
   static const minPasswordLength = 6;
   static const maxPasswordLength = 20;
   static const _weakPassword = '^r[0-9]';
@@ -12,7 +12,8 @@ class Password implements Validatable<PasswordValidationError, String> {
 
   const Password(String password)
       : assert(password != null),
-        _password = password;
+        _password = password,
+        super(password);
 
   @override
   Either<PasswordValidationError, Unit> get error {
@@ -40,9 +41,6 @@ class Password implements Validatable<PasswordValidationError, String> {
       return right(unit);
     }
   }
-
-  @override
-  Either<String, Unit> get value => isValid() ? left(_password) : right(unit);
 
   @override
   bool isValid() {
