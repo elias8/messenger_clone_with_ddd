@@ -9,6 +9,14 @@ abstract class SignUpRequestForm with _$SignUpRequestForm {
     @required EmailAddress emailAddress,
     @required PasswordConfirmation passwordConfirmation,
   }) = _SignUpRequestForm;
+
+  factory SignUpRequestForm.initial() => const SignUpRequestForm(
+        firstName: Name(''),
+        lastName: Name(''),
+        password: Password(''),
+        emailAddress: EmailAddress(''),
+        passwordConfirmation: PasswordConfirmation('', ''),
+      );
 }
 
 extension SignUpRequestFormExtesion on SignUpRequestForm {
