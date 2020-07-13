@@ -2,18 +2,18 @@ part of 'sign_up.dart';
 
 @freezed
 abstract class EmailValidationError with _$EmailValidationError {
-  const factory EmailValidationError.empty() = EmptyEmailAdress;
+  const factory EmailValidationError.empty() = EmptyEmailAddress;
 
-  const factory EmailValidationError.invalid() = InvalidEmailAdress;
+  const factory EmailValidationError.invalid() = InvalidEmailAddress;
 }
 
 @freezed
 abstract class NameValidationError with _$NameValidationError {
-  const factory NameValidationError.empty() = EmptyName;
+  const factory NameValidationError.empty() = EmptyNameError;
 
-  const factory NameValidationError.long() = NameTooLong;
+  const factory NameValidationError.long() = NameTooLongError;
 
-  const factory NameValidationError.short() = NameTooShort;
+  const factory NameValidationError.short() = NameTooShortError;
 }
 
 @freezed

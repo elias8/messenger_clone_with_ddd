@@ -14,11 +14,11 @@ class EmailAddress
   @override
   Either<EmailValidationError, Unit> get error {
     if (_email.isEmpty) {
-      return left(const EmptyEmailAdress());
+      return left(const EmptyEmailAddress());
     } else if (isValid()) {
       return right(unit);
     } else {
-      return left(const InvalidEmailAdress());
+      return left(const InvalidEmailAddress());
     }
   }
 

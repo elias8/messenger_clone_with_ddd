@@ -15,22 +15,20 @@ class Name extends ValidatableValueObject<NameValidationError, String> {
     if (isValid()) {
       return right(unit);
     } else if (_name.isEmpty) {
-      return left(const EmptyName());
-    } else if (_name.length <= minNameLength) {
-      return left(const NameTooShort());
-    } else if (_name.length > maxNameLength) {
-      return left(const NameTooLong());
+      return left(const EmptyNameError());
+    } else if (isLessThanMinLength()) {
+      return left(const NameTooShortError());
+    } else if (isGreaterThanMaxLength()) {
+      return left(const NameTooLongError());
     } else {
       return right(unit);
     }
   }
 
+  bool isGreaterThanMaxLength() => _name.length > maxNameLength;
+
+  bool isLessThanMinLength() => _name.length < minNameLength;
+
   @override
-  bool isValid() {
-    if (_name.length < minNameLength || _name.length > maxNameLength) {
-      return false;
-    } else {
-      return true;
-    }
-  }
+  bool isValid() => !isLessThanMinLength() && !isGreaterThanMaxLength();
 }

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: lines_longer_than_80_chars,deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'sign_up.dart';
 
@@ -40,6 +40,7 @@ mixin _$PasswordStrength {
     @required Result veryStrong(),
     @required Result weak(),
   });
+
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result good(),
@@ -48,6 +49,7 @@ mixin _$PasswordStrength {
     Result weak(),
     @required Result orElse(),
   });
+
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result good(GoodPasswordStrength value),
@@ -55,6 +57,7 @@ mixin _$PasswordStrength {
     @required Result veryStrong(VeryStrongPasswordStrength value),
     @required Result weak(WeakPasswordStrength value),
   });
+
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result good(GoodPasswordStrength value),
@@ -76,6 +79,7 @@ class _$PasswordStrengthCopyWithImpl<$Res>
   _$PasswordStrengthCopyWithImpl(this._value, this._then);
 
   final PasswordStrength _value;
+
   // ignore: unused_field
   final $Res Function(PasswordStrength) _then;
 }
@@ -484,12 +488,12 @@ abstract class WeakPasswordStrength implements PasswordStrength {
 class _$EmailValidationErrorTearOff {
   const _$EmailValidationErrorTearOff();
 
-  EmptyEmailAdress empty() {
-    return const EmptyEmailAdress();
+  EmptyEmailAddress empty() {
+    return const EmptyEmailAddress();
   }
 
-  InvalidEmailAdress invalid() {
-    return const InvalidEmailAdress();
+  InvalidEmailAddress invalid() {
+    return const InvalidEmailAddress();
   }
 }
 
@@ -502,21 +506,24 @@ mixin _$EmailValidationError {
     @required Result empty(),
     @required Result invalid(),
   });
+
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result empty(),
     Result invalid(),
     @required Result orElse(),
   });
+
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result empty(EmptyEmailAdress value),
-    @required Result invalid(InvalidEmailAdress value),
+    @required Result empty(EmptyEmailAddress value),
+    @required Result invalid(InvalidEmailAddress value),
   });
+
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result empty(EmptyEmailAdress value),
-    Result invalid(InvalidEmailAdress value),
+    Result empty(EmptyEmailAddress value),
+    Result invalid(InvalidEmailAddress value),
     @required Result orElse(),
   });
 }
@@ -532,13 +539,14 @@ class _$EmailValidationErrorCopyWithImpl<$Res>
   _$EmailValidationErrorCopyWithImpl(this._value, this._then);
 
   final EmailValidationError _value;
+
   // ignore: unused_field
   final $Res Function(EmailValidationError) _then;
 }
 
 abstract class $EmptyEmailAdressCopyWith<$Res> {
   factory $EmptyEmailAdressCopyWith(
-          EmptyEmailAdress value, $Res Function(EmptyEmailAdress) then) =
+          EmptyEmailAddress value, $Res Function(EmptyEmailAddress) then) =
       _$EmptyEmailAdressCopyWithImpl<$Res>;
 }
 
@@ -546,14 +554,14 @@ class _$EmptyEmailAdressCopyWithImpl<$Res>
     extends _$EmailValidationErrorCopyWithImpl<$Res>
     implements $EmptyEmailAdressCopyWith<$Res> {
   _$EmptyEmailAdressCopyWithImpl(
-      EmptyEmailAdress _value, $Res Function(EmptyEmailAdress) _then)
-      : super(_value, (v) => _then(v as EmptyEmailAdress));
+      EmptyEmailAddress _value, $Res Function(EmptyEmailAddress) _then)
+      : super(_value, (v) => _then(v as EmptyEmailAddress));
 
   @override
-  EmptyEmailAdress get _value => super._value as EmptyEmailAdress;
+  EmptyEmailAddress get _value => super._value as EmptyEmailAddress;
 }
 
-class _$EmptyEmailAdress implements EmptyEmailAdress {
+class _$EmptyEmailAdress implements EmptyEmailAddress {
   const _$EmptyEmailAdress();
 
   @override
@@ -563,7 +571,7 @@ class _$EmptyEmailAdress implements EmptyEmailAdress {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is EmptyEmailAdress);
+    return identical(this, other) || (other is EmptyEmailAddress);
   }
 
   @override
@@ -597,8 +605,8 @@ class _$EmptyEmailAdress implements EmptyEmailAdress {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result empty(EmptyEmailAdress value),
-    @required Result invalid(InvalidEmailAdress value),
+    @required Result empty(EmptyEmailAddress value),
+    @required Result invalid(InvalidEmailAddress value),
   }) {
     assert(empty != null);
     assert(invalid != null);
@@ -608,8 +616,8 @@ class _$EmptyEmailAdress implements EmptyEmailAdress {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result empty(EmptyEmailAdress value),
-    Result invalid(InvalidEmailAdress value),
+    Result empty(EmptyEmailAddress value),
+    Result invalid(InvalidEmailAddress value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -620,13 +628,13 @@ class _$EmptyEmailAdress implements EmptyEmailAdress {
   }
 }
 
-abstract class EmptyEmailAdress implements EmailValidationError {
-  const factory EmptyEmailAdress() = _$EmptyEmailAdress;
+abstract class EmptyEmailAddress implements EmailValidationError {
+  const factory EmptyEmailAddress() = _$EmptyEmailAdress;
 }
 
 abstract class $InvalidEmailAdressCopyWith<$Res> {
   factory $InvalidEmailAdressCopyWith(
-          InvalidEmailAdress value, $Res Function(InvalidEmailAdress) then) =
+          InvalidEmailAddress value, $Res Function(InvalidEmailAddress) then) =
       _$InvalidEmailAdressCopyWithImpl<$Res>;
 }
 
@@ -634,14 +642,14 @@ class _$InvalidEmailAdressCopyWithImpl<$Res>
     extends _$EmailValidationErrorCopyWithImpl<$Res>
     implements $InvalidEmailAdressCopyWith<$Res> {
   _$InvalidEmailAdressCopyWithImpl(
-      InvalidEmailAdress _value, $Res Function(InvalidEmailAdress) _then)
-      : super(_value, (v) => _then(v as InvalidEmailAdress));
+      InvalidEmailAddress _value, $Res Function(InvalidEmailAddress) _then)
+      : super(_value, (v) => _then(v as InvalidEmailAddress));
 
   @override
-  InvalidEmailAdress get _value => super._value as InvalidEmailAdress;
+  InvalidEmailAddress get _value => super._value as InvalidEmailAddress;
 }
 
-class _$InvalidEmailAdress implements InvalidEmailAdress {
+class _$InvalidEmailAdress implements InvalidEmailAddress {
   const _$InvalidEmailAdress();
 
   @override
@@ -651,7 +659,7 @@ class _$InvalidEmailAdress implements InvalidEmailAdress {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is InvalidEmailAdress);
+    return identical(this, other) || (other is InvalidEmailAddress);
   }
 
   @override
@@ -685,8 +693,8 @@ class _$InvalidEmailAdress implements InvalidEmailAdress {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result empty(EmptyEmailAdress value),
-    @required Result invalid(InvalidEmailAdress value),
+    @required Result empty(EmptyEmailAddress value),
+    @required Result invalid(InvalidEmailAddress value),
   }) {
     assert(empty != null);
     assert(invalid != null);
@@ -696,8 +704,8 @@ class _$InvalidEmailAdress implements InvalidEmailAdress {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result empty(EmptyEmailAdress value),
-    Result invalid(InvalidEmailAdress value),
+    Result empty(EmptyEmailAddress value),
+    Result invalid(InvalidEmailAddress value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -708,23 +716,23 @@ class _$InvalidEmailAdress implements InvalidEmailAdress {
   }
 }
 
-abstract class InvalidEmailAdress implements EmailValidationError {
-  const factory InvalidEmailAdress() = _$InvalidEmailAdress;
+abstract class InvalidEmailAddress implements EmailValidationError {
+  const factory InvalidEmailAddress() = _$InvalidEmailAdress;
 }
 
 class _$NameValidationErrorTearOff {
   const _$NameValidationErrorTearOff();
 
-  EmptyName empty() {
-    return const EmptyName();
+  EmptyNameError empty() {
+    return const EmptyNameError();
   }
 
-  NameTooLong long() {
-    return const NameTooLong();
+  NameTooLongError long() {
+    return const NameTooLongError();
   }
 
-  NameTooShort short() {
-    return const NameTooShort();
+  NameTooShortError short() {
+    return const NameTooShortError();
   }
 }
 
@@ -738,6 +746,7 @@ mixin _$NameValidationError {
     @required Result long(),
     @required Result short(),
   });
+
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result empty(),
@@ -745,17 +754,19 @@ mixin _$NameValidationError {
     Result short(),
     @required Result orElse(),
   });
+
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result empty(EmptyName value),
-    @required Result long(NameTooLong value),
-    @required Result short(NameTooShort value),
+    @required Result empty(EmptyNameError value),
+    @required Result long(NameTooLongError value),
+    @required Result short(NameTooShortError value),
   });
+
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result empty(EmptyName value),
-    Result long(NameTooLong value),
-    Result short(NameTooShort value),
+    Result empty(EmptyNameError value),
+    Result long(NameTooLongError value),
+    Result short(NameTooShortError value),
     @required Result orElse(),
   });
 }
@@ -771,26 +782,29 @@ class _$NameValidationErrorCopyWithImpl<$Res>
   _$NameValidationErrorCopyWithImpl(this._value, this._then);
 
   final NameValidationError _value;
+
   // ignore: unused_field
   final $Res Function(NameValidationError) _then;
 }
 
 abstract class $EmptyNameCopyWith<$Res> {
-  factory $EmptyNameCopyWith(EmptyName value, $Res Function(EmptyName) then) =
+  factory $EmptyNameCopyWith(
+          EmptyNameError value, $Res Function(EmptyNameError) then) =
       _$EmptyNameCopyWithImpl<$Res>;
 }
 
 class _$EmptyNameCopyWithImpl<$Res>
     extends _$NameValidationErrorCopyWithImpl<$Res>
     implements $EmptyNameCopyWith<$Res> {
-  _$EmptyNameCopyWithImpl(EmptyName _value, $Res Function(EmptyName) _then)
-      : super(_value, (v) => _then(v as EmptyName));
+  _$EmptyNameCopyWithImpl(
+      EmptyNameError _value, $Res Function(EmptyNameError) _then)
+      : super(_value, (v) => _then(v as EmptyNameError));
 
   @override
-  EmptyName get _value => super._value as EmptyName;
+  EmptyNameError get _value => super._value as EmptyNameError;
 }
 
-class _$EmptyName implements EmptyName {
+class _$EmptyName implements EmptyNameError {
   const _$EmptyName();
 
   @override
@@ -800,7 +814,7 @@ class _$EmptyName implements EmptyName {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is EmptyName);
+    return identical(this, other) || (other is EmptyNameError);
   }
 
   @override
@@ -837,9 +851,9 @@ class _$EmptyName implements EmptyName {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result empty(EmptyName value),
-    @required Result long(NameTooLong value),
-    @required Result short(NameTooShort value),
+    @required Result empty(EmptyNameError value),
+    @required Result long(NameTooLongError value),
+    @required Result short(NameTooShortError value),
   }) {
     assert(empty != null);
     assert(long != null);
@@ -850,9 +864,9 @@ class _$EmptyName implements EmptyName {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result empty(EmptyName value),
-    Result long(NameTooLong value),
-    Result short(NameTooShort value),
+    Result empty(EmptyNameError value),
+    Result long(NameTooLongError value),
+    Result short(NameTooShortError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -863,13 +877,13 @@ class _$EmptyName implements EmptyName {
   }
 }
 
-abstract class EmptyName implements NameValidationError {
-  const factory EmptyName() = _$EmptyName;
+abstract class EmptyNameError implements NameValidationError {
+  const factory EmptyNameError() = _$EmptyName;
 }
 
 abstract class $NameTooLongCopyWith<$Res> {
   factory $NameTooLongCopyWith(
-          NameTooLong value, $Res Function(NameTooLong) then) =
+          NameTooLongError value, $Res Function(NameTooLongError) then) =
       _$NameTooLongCopyWithImpl<$Res>;
 }
 
@@ -877,14 +891,14 @@ class _$NameTooLongCopyWithImpl<$Res>
     extends _$NameValidationErrorCopyWithImpl<$Res>
     implements $NameTooLongCopyWith<$Res> {
   _$NameTooLongCopyWithImpl(
-      NameTooLong _value, $Res Function(NameTooLong) _then)
-      : super(_value, (v) => _then(v as NameTooLong));
+      NameTooLongError _value, $Res Function(NameTooLongError) _then)
+      : super(_value, (v) => _then(v as NameTooLongError));
 
   @override
-  NameTooLong get _value => super._value as NameTooLong;
+  NameTooLongError get _value => super._value as NameTooLongError;
 }
 
-class _$NameTooLong implements NameTooLong {
+class _$NameTooLong implements NameTooLongError {
   const _$NameTooLong();
 
   @override
@@ -894,7 +908,7 @@ class _$NameTooLong implements NameTooLong {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NameTooLong);
+    return identical(this, other) || (other is NameTooLongError);
   }
 
   @override
@@ -931,9 +945,9 @@ class _$NameTooLong implements NameTooLong {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result empty(EmptyName value),
-    @required Result long(NameTooLong value),
-    @required Result short(NameTooShort value),
+    @required Result empty(EmptyNameError value),
+    @required Result long(NameTooLongError value),
+    @required Result short(NameTooShortError value),
   }) {
     assert(empty != null);
     assert(long != null);
@@ -944,9 +958,9 @@ class _$NameTooLong implements NameTooLong {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result empty(EmptyName value),
-    Result long(NameTooLong value),
-    Result short(NameTooShort value),
+    Result empty(EmptyNameError value),
+    Result long(NameTooLongError value),
+    Result short(NameTooShortError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -957,13 +971,13 @@ class _$NameTooLong implements NameTooLong {
   }
 }
 
-abstract class NameTooLong implements NameValidationError {
-  const factory NameTooLong() = _$NameTooLong;
+abstract class NameTooLongError implements NameValidationError {
+  const factory NameTooLongError() = _$NameTooLong;
 }
 
 abstract class $NameTooShortCopyWith<$Res> {
   factory $NameTooShortCopyWith(
-          NameTooShort value, $Res Function(NameTooShort) then) =
+          NameTooShortError value, $Res Function(NameTooShortError) then) =
       _$NameTooShortCopyWithImpl<$Res>;
 }
 
@@ -971,14 +985,14 @@ class _$NameTooShortCopyWithImpl<$Res>
     extends _$NameValidationErrorCopyWithImpl<$Res>
     implements $NameTooShortCopyWith<$Res> {
   _$NameTooShortCopyWithImpl(
-      NameTooShort _value, $Res Function(NameTooShort) _then)
-      : super(_value, (v) => _then(v as NameTooShort));
+      NameTooShortError _value, $Res Function(NameTooShortError) _then)
+      : super(_value, (v) => _then(v as NameTooShortError));
 
   @override
-  NameTooShort get _value => super._value as NameTooShort;
+  NameTooShortError get _value => super._value as NameTooShortError;
 }
 
-class _$NameTooShort implements NameTooShort {
+class _$NameTooShort implements NameTooShortError {
   const _$NameTooShort();
 
   @override
@@ -988,7 +1002,7 @@ class _$NameTooShort implements NameTooShort {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NameTooShort);
+    return identical(this, other) || (other is NameTooShortError);
   }
 
   @override
@@ -1025,9 +1039,9 @@ class _$NameTooShort implements NameTooShort {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result empty(EmptyName value),
-    @required Result long(NameTooLong value),
-    @required Result short(NameTooShort value),
+    @required Result empty(EmptyNameError value),
+    @required Result long(NameTooLongError value),
+    @required Result short(NameTooShortError value),
   }) {
     assert(empty != null);
     assert(long != null);
@@ -1038,9 +1052,9 @@ class _$NameTooShort implements NameTooShort {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result empty(EmptyName value),
-    Result long(NameTooLong value),
-    Result short(NameTooShort value),
+    Result empty(EmptyNameError value),
+    Result long(NameTooLongError value),
+    Result short(NameTooShortError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1051,8 +1065,8 @@ class _$NameTooShort implements NameTooShort {
   }
 }
 
-abstract class NameTooShort implements NameValidationError {
-  const factory NameTooShort() = _$NameTooShort;
+abstract class NameTooShortError implements NameValidationError {
+  const factory NameTooShortError() = _$NameTooShort;
 }
 
 class _$PasswordValidationErrorTearOff {
@@ -1086,6 +1100,7 @@ mixin _$PasswordValidationError {
     @required Result tooLong(),
     @required Result tooShort(),
   });
+
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result confirmationFailed(),
@@ -1094,6 +1109,7 @@ mixin _$PasswordValidationError {
     Result tooShort(),
     @required Result orElse(),
   });
+
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result confirmationFailed(PasswordConfirmationError value),
@@ -1101,6 +1117,7 @@ mixin _$PasswordValidationError {
     @required Result tooLong(PasswordTooLogError value),
     @required Result tooShort(PasswordTooShortError value),
   });
+
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result confirmationFailed(PasswordConfirmationError value),
@@ -1122,6 +1139,7 @@ class _$PasswordValidationErrorCopyWithImpl<$Res>
   _$PasswordValidationErrorCopyWithImpl(this._value, this._then);
 
   final PasswordValidationError _value;
+
   // ignore: unused_field
   final $Res Function(PasswordValidationError) _then;
 }

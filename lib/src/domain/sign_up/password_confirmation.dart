@@ -15,12 +15,9 @@ class PasswordConfirmation
         super(confirmation);
 
   @override
-  Either<PasswordValidationError, Unit> get error => _passwordMatches()
-      ? right(unit)
-      : left(const PasswordConfirmationError());
+  Either<PasswordValidationError, Unit> get error =>
+      isValid() ? right(unit) : left(const PasswordConfirmationError());
 
   @override
-  bool isValid() => _passwordMatches();
-
-  bool _passwordMatches() => _password == _confirmation;
+  bool isValid() => _password == _confirmation;
 }
