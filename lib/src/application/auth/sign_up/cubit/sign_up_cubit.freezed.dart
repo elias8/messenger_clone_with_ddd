@@ -83,6 +83,8 @@ abstract class $EditingSignUpRequestFormStateCopyWith<$Res> {
           $Res Function(EditingSignUpRequestFormState) then) =
       _$EditingSignUpRequestFormStateCopyWithImpl<$Res>;
   $Res call({bool showError, SignUpRequestForm signUpForm});
+
+  $SignUpRequestFormCopyWith<$Res> get signUpForm;
 }
 
 class _$EditingSignUpRequestFormStateCopyWithImpl<$Res>
@@ -108,6 +110,16 @@ class _$EditingSignUpRequestFormStateCopyWithImpl<$Res>
           ? _value.signUpForm
           : signUpForm as SignUpRequestForm,
     ));
+  }
+
+  @override
+  $SignUpRequestFormCopyWith<$Res> get signUpForm {
+    if (_value.signUpForm == null) {
+      return null;
+    }
+    return $SignUpRequestFormCopyWith<$Res>(_value.signUpForm, (value) {
+      return _then(_value.copyWith(signUpForm: value));
+    });
   }
 }
 

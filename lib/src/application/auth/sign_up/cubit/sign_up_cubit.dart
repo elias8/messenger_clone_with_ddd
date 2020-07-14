@@ -14,61 +14,39 @@ class SignUpCubit extends Cubit<SignUpState> {
   SignUpCubit(AuthRepository authFacade)
       : assert(authFacade != null),
         _authFacade = authFacade,
-        super(initialState: SignUpState.initial()) {
-    _initializeForm();
-  }
+        _signUpForm = SignUpRequestForm.initial(),
+        super(initialState: SignUpState.initial());
 
   void onConfirmationPasswordChanged(String passwordConfirmation) {
-    final password = _signUpForm.password.value.fold((l) => l, (r) => '');
+    final password = _signUpForm.password.getOrElse('');
     final confirmation = PasswordConfirmation(password, passwordConfirmation);
     _signUpForm = _signUpForm.copyWith(passwordConfirmation: confirmation);
-    final newState = EditingSignUpRequestFormState(
-      showError: _showError,
-      signUpForm: _signUpForm,
-    );
-    emit(newState);
+    _emitEditingState();
   }
 
   void onEmailChanged(String email) {
     _signUpForm = _signUpForm.copyWith(emailAddress: EmailAddress(email));
-    final newState = EditingSignUpRequestFormState(
-      showError: _showError,
-      signUpForm: _signUpForm,
-    );
-    emit(newState);
+    _emitEditingState();
   }
 
   void onFirstNameChanged(String firstName) {
     _signUpForm = _signUpForm.copyWith(firstName: Name(firstName));
-    final newState = EditingSignUpRequestFormState(
-      showError: _showError,
-      signUpForm: _signUpForm,
-    );
-    emit(newState);
+    _emitEditingState();
   }
 
   void onLastNameChanged(String lastName) {
     _signUpForm = _signUpForm.copyWith(lastName: Name(lastName));
-    final newState = EditingSignUpRequestFormState(
-      showError: _showError,
-      signUpForm: _signUpForm,
-    );
-    emit(newState);
+    _emitEditingState();
   }
 
   void onPasswordChanged(String password) {
-    final currentConfirmation =
-        _signUpForm.passwordConfirmation.value.fold((l) => l, (r) => '');
+    final currentConfirmation = _signUpForm.passwordConfirmation.getOrElse('');
     final confirmation = PasswordConfirmation(password, currentConfirmation);
     _signUpForm = _signUpForm.copyWith(
       password: Password(password),
       passwordConfirmation: confirmation,
     );
-    final newState = EditingSignUpRequestFormState(
-      showError: _showError,
-      signUpForm: _signUpForm,
-    );
-    emit(newState);
+    _emitEditingState();
   }
 
   void submitForm() {
@@ -79,18 +57,20 @@ class SignUpCubit extends Cubit<SignUpState> {
     }
   }
 
-  void _emitShowErrorState() {
-    _showError = true;
-    final newState = EditingSignUpRequestFormState(
+  void _emitEditingState() {
+    final editingState = EditingSignUpRequestFormState(
       showError: _showError,
       signUpForm: _signUpForm,
     );
-    emit(newState);
+    emit(editingState);
+  }
+
+  void _emitShowErrorState() {
+    _showError = true;
+    _emitEditingState();
   }
 
   void _emitSubmittingState() => emit(const SubmittingSignUpRequestFormState());
-
-  void _initializeForm() => _signUpForm = SignUpRequestForm.initial();
 
   void _setSubmittingStateAndSignUp() {
     _emitSubmittingState();
