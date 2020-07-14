@@ -11,7 +11,6 @@ class LastNameField extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(4),
         child: TextFormField(
-          maxLines: 1,
           validator: (value) => signUpCubit.state.maybeWhen(
             editing: (showError, signUpForm) => signUpForm.lastName.error.fold(
               (l) => l.maybeWhen(
@@ -25,7 +24,9 @@ class LastNameField extends StatelessWidget {
             orElse: () => null,
           ),
           onChanged: signUpCubit.onLastNameChanged,
+          maxLines: 1,
           textInputAction: TextInputAction.next,
+          textCapitalization: TextCapitalization.words,
           decoration: SignUpForm.inputDecoration.copyWith(
             hintText: 'Last name',
           ),

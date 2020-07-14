@@ -6,6 +6,7 @@ import 'package:messenger_clone/src/ui/ui.dart';
 @MaterialAutoRouter()
 class $Router {
   @initial
+  SignUpScreen signUpScreen;
   HomeScreen homeScreen;
   ChatScreen chatScreen;
   ProfileScreen profileScreen;

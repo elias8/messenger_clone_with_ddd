@@ -14,9 +14,10 @@ class Application extends StatelessWidget {
       create: (_) => getIt<ThemeCubit>(),
       child: CubitBuilder<ThemeCubit, ThemeState>(
         builder: (context, state) => MaterialApp(
+          title: 'Messenger Clone',
           theme: state.when(
-            darkTheme: () => AppTheme.darkTheme(),
-            lightTheme: () => AppTheme.lightTheme(),
+            darkTheme: AppTheme.darkTheme,
+            lightTheme: AppTheme.lightTheme,
           ),
           debugShowCheckedModeBanner: false,
           builder: ExtendedNavigator<Router>(router: Router()),

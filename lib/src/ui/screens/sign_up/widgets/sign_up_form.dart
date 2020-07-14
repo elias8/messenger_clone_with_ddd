@@ -20,18 +20,20 @@ class SignUpForm extends StatelessWidget {
       listener: (context, state) => state.maybeWhen(
         submitting: () => FocusScope.of(context).unfocus(),
         signUpResult: (result) => result.fold(
-          (l) => l.when(
-            serverError: () => Scaffold.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Something went wrong please try again.'),
+          (l) {
+            final error = l.when(
+              emailAlreadyInUse: () => 'Email already in use',
+              networkError: (error) => error.maybeWhen(
+                server: () => 'Unexpected server error.',
+                cancelled: () => 'Request cancelled.',
+                timeout: () => 'Network timeout. Try again.',
+                orElse: () => 'Network error.',
               ),
-            ),
-            emailAlreadyInUse: () => Scaffold.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Email already in use'),
-              ),
-            ),
-          ),
+              unexpectedError: () => 'Something went wrong please try again.',
+            );
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text(error)));
+            return null;
+          },
           (r) => context.navigator.pushNamed(Routes.homeScreen),
         ),
         orElse: () => null,

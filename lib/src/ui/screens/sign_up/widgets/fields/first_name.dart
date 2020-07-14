@@ -26,6 +26,7 @@ class FirstNameField extends StatelessWidget {
           maxLines: 1,
           keyboardType: TextInputType.text,
           textInputAction: TextInputAction.next,
+          textCapitalization: TextCapitalization.words,
           decoration: SignUpForm.inputDecoration.copyWith(
             hintText: 'First name',
           ),

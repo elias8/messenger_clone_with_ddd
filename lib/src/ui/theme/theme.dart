@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 part 'colors.dart';
@@ -28,6 +29,9 @@ class AppTheme {
 
   static ThemeData lightTheme() {
     return ThemeData.light().copyWith(
+      buttonTheme: ButtonThemeData(
+        disabledColor: Colors.grey.withOpacity(.5),
+      ),
       primaryColor: Colors.white,
       backgroundColor: Colors.white,
       scaffoldBackgroundColor: Colors.white,
@@ -51,7 +55,7 @@ class AppTheme {
 }
 
 class IconThemes {
-  static blueIconsAndAppBarTheme(BuildContext context) {
+  static ThemeData blueIconsAndAppBarTheme(BuildContext context) {
     return Theme.of(context).copyWith(
       iconTheme: IconThemeData(color: Colors.blue),
       appBarTheme: Theme.of(context).appBarTheme.copyWith(
@@ -60,13 +64,13 @@ class IconThemes {
     );
   }
 
-  static blueIconsTheme(BuildContext context) {
+  static ThemeData blueIconsTheme(BuildContext context) {
     return Theme.of(context).copyWith(
       iconTheme: IconThemeData(color: Colors.blue),
     );
   }
 
-  static whiteIconsTheme(BuildContext context) {
+  static ThemeData whiteIconsTheme(BuildContext context) {
     return Theme.of(context).copyWith(
       iconTheme: const IconThemeData(color: Colors.white),
     );
