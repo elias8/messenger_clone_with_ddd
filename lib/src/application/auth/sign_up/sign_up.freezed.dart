@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: lines_longer_than_80_chars, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'sign_up.dart';
 
@@ -219,12 +219,18 @@ abstract class _SignUpRequestForm implements SignUpRequestForm {
 class _$SignUpFailureTearOff {
   const _$SignUpFailureTearOff();
 
-  SignUpServerError serverError() {
-    return const SignUpServerError();
-  }
-
   EmailAlreadyInUseError emailAlreadyInUse() {
     return const EmailAlreadyInUseError();
+  }
+
+  SignUpNetworkError networkError(NetworkError networkError) {
+    return SignUpNetworkError(
+      networkError,
+    );
+  }
+
+  UnexpectedSignUpError unexpectedError() {
+    return const UnexpectedSignUpError();
   }
 }
 
@@ -234,24 +240,28 @@ const $SignUpFailure = _$SignUpFailureTearOff();
 mixin _$SignUpFailure {
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result serverError(),
     @required Result emailAlreadyInUse(),
+    @required Result networkError(NetworkError networkError),
+    @required Result unexpectedError(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result serverError(),
     Result emailAlreadyInUse(),
+    Result networkError(NetworkError networkError),
+    Result unexpectedError(),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result serverError(SignUpServerError value),
     @required Result emailAlreadyInUse(EmailAlreadyInUseError value),
+    @required Result networkError(SignUpNetworkError value),
+    @required Result unexpectedError(UnexpectedSignUpError value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result serverError(SignUpServerError value),
     Result emailAlreadyInUse(EmailAlreadyInUseError value),
+    Result networkError(SignUpNetworkError value),
+    Result unexpectedError(UnexpectedSignUpError value),
     @required Result orElse(),
   });
 }
@@ -269,94 +279,6 @@ class _$SignUpFailureCopyWithImpl<$Res>
   final SignUpFailure _value;
   // ignore: unused_field
   final $Res Function(SignUpFailure) _then;
-}
-
-abstract class $SignUpServerErrorCopyWith<$Res> {
-  factory $SignUpServerErrorCopyWith(
-          SignUpServerError value, $Res Function(SignUpServerError) then) =
-      _$SignUpServerErrorCopyWithImpl<$Res>;
-}
-
-class _$SignUpServerErrorCopyWithImpl<$Res>
-    extends _$SignUpFailureCopyWithImpl<$Res>
-    implements $SignUpServerErrorCopyWith<$Res> {
-  _$SignUpServerErrorCopyWithImpl(
-      SignUpServerError _value, $Res Function(SignUpServerError) _then)
-      : super(_value, (v) => _then(v as SignUpServerError));
-
-  @override
-  SignUpServerError get _value => super._value as SignUpServerError;
-}
-
-class _$SignUpServerError implements SignUpServerError {
-  const _$SignUpServerError();
-
-  @override
-  String toString() {
-    return 'SignUpFailure.serverError()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is SignUpServerError);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result serverError(),
-    @required Result emailAlreadyInUse(),
-  }) {
-    assert(serverError != null);
-    assert(emailAlreadyInUse != null);
-    return serverError();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result serverError(),
-    Result emailAlreadyInUse(),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (serverError != null) {
-      return serverError();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result serverError(SignUpServerError value),
-    @required Result emailAlreadyInUse(EmailAlreadyInUseError value),
-  }) {
-    assert(serverError != null);
-    assert(emailAlreadyInUse != null);
-    return serverError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result serverError(SignUpServerError value),
-    Result emailAlreadyInUse(EmailAlreadyInUseError value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (serverError != null) {
-      return serverError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SignUpServerError implements SignUpFailure {
-  const factory SignUpServerError() = _$SignUpServerError;
 }
 
 abstract class $EmailAlreadyInUseErrorCopyWith<$Res> {
@@ -395,19 +317,22 @@ class _$EmailAlreadyInUseError implements EmailAlreadyInUseError {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result serverError(),
     @required Result emailAlreadyInUse(),
+    @required Result networkError(NetworkError networkError),
+    @required Result unexpectedError(),
   }) {
-    assert(serverError != null);
     assert(emailAlreadyInUse != null);
+    assert(networkError != null);
+    assert(unexpectedError != null);
     return emailAlreadyInUse();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result serverError(),
     Result emailAlreadyInUse(),
+    Result networkError(NetworkError networkError),
+    Result unexpectedError(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -420,19 +345,22 @@ class _$EmailAlreadyInUseError implements EmailAlreadyInUseError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result serverError(SignUpServerError value),
     @required Result emailAlreadyInUse(EmailAlreadyInUseError value),
+    @required Result networkError(SignUpNetworkError value),
+    @required Result unexpectedError(UnexpectedSignUpError value),
   }) {
-    assert(serverError != null);
     assert(emailAlreadyInUse != null);
+    assert(networkError != null);
+    assert(unexpectedError != null);
     return emailAlreadyInUse(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result serverError(SignUpServerError value),
     Result emailAlreadyInUse(EmailAlreadyInUseError value),
+    Result networkError(SignUpNetworkError value),
+    Result unexpectedError(UnexpectedSignUpError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -445,4 +373,232 @@ class _$EmailAlreadyInUseError implements EmailAlreadyInUseError {
 
 abstract class EmailAlreadyInUseError implements SignUpFailure {
   const factory EmailAlreadyInUseError() = _$EmailAlreadyInUseError;
+}
+
+abstract class $SignUpNetworkErrorCopyWith<$Res> {
+  factory $SignUpNetworkErrorCopyWith(
+          SignUpNetworkError value, $Res Function(SignUpNetworkError) then) =
+      _$SignUpNetworkErrorCopyWithImpl<$Res>;
+  $Res call({NetworkError networkError});
+
+  $NetworkErrorCopyWith<$Res> get networkError;
+}
+
+class _$SignUpNetworkErrorCopyWithImpl<$Res>
+    extends _$SignUpFailureCopyWithImpl<$Res>
+    implements $SignUpNetworkErrorCopyWith<$Res> {
+  _$SignUpNetworkErrorCopyWithImpl(
+      SignUpNetworkError _value, $Res Function(SignUpNetworkError) _then)
+      : super(_value, (v) => _then(v as SignUpNetworkError));
+
+  @override
+  SignUpNetworkError get _value => super._value as SignUpNetworkError;
+
+  @override
+  $Res call({
+    Object networkError = freezed,
+  }) {
+    return _then(SignUpNetworkError(
+      networkError == freezed
+          ? _value.networkError
+          : networkError as NetworkError,
+    ));
+  }
+
+  @override
+  $NetworkErrorCopyWith<$Res> get networkError {
+    if (_value.networkError == null) {
+      return null;
+    }
+    return $NetworkErrorCopyWith<$Res>(_value.networkError, (value) {
+      return _then(_value.copyWith(networkError: value));
+    });
+  }
+}
+
+class _$SignUpNetworkError implements SignUpNetworkError {
+  const _$SignUpNetworkError(this.networkError) : assert(networkError != null);
+
+  @override
+  final NetworkError networkError;
+
+  @override
+  String toString() {
+    return 'SignUpFailure.networkError(networkError: $networkError)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is SignUpNetworkError &&
+            (identical(other.networkError, networkError) ||
+                const DeepCollectionEquality()
+                    .equals(other.networkError, networkError)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(networkError);
+
+  @override
+  $SignUpNetworkErrorCopyWith<SignUpNetworkError> get copyWith =>
+      _$SignUpNetworkErrorCopyWithImpl<SignUpNetworkError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result emailAlreadyInUse(),
+    @required Result networkError(NetworkError networkError),
+    @required Result unexpectedError(),
+  }) {
+    assert(emailAlreadyInUse != null);
+    assert(networkError != null);
+    assert(unexpectedError != null);
+    return networkError(this.networkError);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result emailAlreadyInUse(),
+    Result networkError(NetworkError networkError),
+    Result unexpectedError(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (networkError != null) {
+      return networkError(this.networkError);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result emailAlreadyInUse(EmailAlreadyInUseError value),
+    @required Result networkError(SignUpNetworkError value),
+    @required Result unexpectedError(UnexpectedSignUpError value),
+  }) {
+    assert(emailAlreadyInUse != null);
+    assert(networkError != null);
+    assert(unexpectedError != null);
+    return networkError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result emailAlreadyInUse(EmailAlreadyInUseError value),
+    Result networkError(SignUpNetworkError value),
+    Result unexpectedError(UnexpectedSignUpError value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (networkError != null) {
+      return networkError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignUpNetworkError implements SignUpFailure {
+  const factory SignUpNetworkError(NetworkError networkError) =
+      _$SignUpNetworkError;
+
+  NetworkError get networkError;
+  $SignUpNetworkErrorCopyWith<SignUpNetworkError> get copyWith;
+}
+
+abstract class $UnexpectedSignUpErrorCopyWith<$Res> {
+  factory $UnexpectedSignUpErrorCopyWith(UnexpectedSignUpError value,
+          $Res Function(UnexpectedSignUpError) then) =
+      _$UnexpectedSignUpErrorCopyWithImpl<$Res>;
+}
+
+class _$UnexpectedSignUpErrorCopyWithImpl<$Res>
+    extends _$SignUpFailureCopyWithImpl<$Res>
+    implements $UnexpectedSignUpErrorCopyWith<$Res> {
+  _$UnexpectedSignUpErrorCopyWithImpl(
+      UnexpectedSignUpError _value, $Res Function(UnexpectedSignUpError) _then)
+      : super(_value, (v) => _then(v as UnexpectedSignUpError));
+
+  @override
+  UnexpectedSignUpError get _value => super._value as UnexpectedSignUpError;
+}
+
+class _$UnexpectedSignUpError implements UnexpectedSignUpError {
+  const _$UnexpectedSignUpError();
+
+  @override
+  String toString() {
+    return 'SignUpFailure.unexpectedError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is UnexpectedSignUpError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result emailAlreadyInUse(),
+    @required Result networkError(NetworkError networkError),
+    @required Result unexpectedError(),
+  }) {
+    assert(emailAlreadyInUse != null);
+    assert(networkError != null);
+    assert(unexpectedError != null);
+    return unexpectedError();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result emailAlreadyInUse(),
+    Result networkError(NetworkError networkError),
+    Result unexpectedError(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (unexpectedError != null) {
+      return unexpectedError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result emailAlreadyInUse(EmailAlreadyInUseError value),
+    @required Result networkError(SignUpNetworkError value),
+    @required Result unexpectedError(UnexpectedSignUpError value),
+  }) {
+    assert(emailAlreadyInUse != null);
+    assert(networkError != null);
+    assert(unexpectedError != null);
+    return unexpectedError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result emailAlreadyInUse(EmailAlreadyInUseError value),
+    Result networkError(SignUpNetworkError value),
+    Result unexpectedError(UnexpectedSignUpError value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (unexpectedError != null) {
+      return unexpectedError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UnexpectedSignUpError implements SignUpFailure {
+  const factory UnexpectedSignUpError() = _$UnexpectedSignUpError;
 }
