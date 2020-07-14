@@ -6,54 +6,54 @@ part 'dio.freezed.dart';
 @freezed
 abstract class DioErrorHandle with _$DioErrorHandle {
   const factory DioErrorHandle.badRequest(DioError dioError) =
-      NetworkBadRequestError;
+      DioBadRequestError;
 
-  const factory DioErrorHandle.cancelled() = NetworkCancelError;
+  const factory DioErrorHandle.cancelled() = DioCancelError;
 
-  const factory DioErrorHandle.notFound(DioError dioError) =
-      NetworkNotFoundError;
+  const factory DioErrorHandle.notFound(DioError dioError) = DioNotFoundError;
 
-  const factory DioErrorHandle.response(DioError dioError) =
-      NetworkResponseError;
+  const factory DioErrorHandle.response(DioError dioError) = DioResponseError;
 
-  const factory DioErrorHandle.server() = NetworkServerError;
+  const factory DioErrorHandle.server() = DioServerError;
 
-  const factory DioErrorHandle.timeout() = NetworkTimeoutError;
+  const factory DioErrorHandle.timeout() = DioTimeoutError;
 
   const factory DioErrorHandle.unauthorized(DioError dioError) =
-      NetworkUnauthorizedError;
+      DioUnauthorizedError;
 
-  const factory DioErrorHandle.unknown(DioError dioError) = UnkownNetworkError;
+  const factory DioErrorHandle.unknown(DioError dioError) = UnkownDioError;
 }
 
 extension DioErrorExt on DioError {
   DioErrorHandle handle() {
     switch (type) {
       case DioErrorType.CONNECT_TIMEOUT:
-        return const NetworkTimeoutError();
+        return const DioTimeoutError();
       case DioErrorType.SEND_TIMEOUT:
-        return const NetworkTimeoutError();
+        return const DioTimeoutError();
       case DioErrorType.RECEIVE_TIMEOUT:
-        return const NetworkTimeoutError();
+        return const DioTimeoutError();
       case DioErrorType.RESPONSE:
         return _handleResponseError();
       case DioErrorType.CANCEL:
-        return const NetworkCancelError();
+        return const DioCancelError();
       case DioErrorType.DEFAULT:
       default:
-        return UnkownNetworkError(this);
+        return UnkownDioError(this);
     }
   }
 
   DioErrorHandle _handleResponseError() {
     if (response.statusCode == 400) {
-      return NetworkBadRequestError(this);
+      return DioBadRequestError(this);
     } else if (response.statusCode == 401) {
-      return NetworkUnauthorizedError(this);
+      return DioUnauthorizedError(this);
     } else if (response.statusCode == 404) {
-      return NetworkNotFoundError(this);
+      return DioNotFoundError(this);
+    } else if (response.statusCode >= 500) {
+      return const DioServerError();
     } else {
-      return NetworkResponseError(this);
+      return DioResponseError(this);
     }
   }
 }

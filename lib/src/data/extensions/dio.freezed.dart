@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: lines_longer_than_80_chars, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
 part of 'dio.dart';
 
@@ -12,44 +12,44 @@ T _$identity<T>(T value) => value;
 class _$DioErrorHandleTearOff {
   const _$DioErrorHandleTearOff();
 
-  NetworkBadRequestError badRequest(DioError dioError) {
-    return NetworkBadRequestError(
+  DioBadRequestError badRequest(DioError dioError) {
+    return DioBadRequestError(
       dioError,
     );
   }
 
-  NetworkCancelError cancelled() {
-    return const NetworkCancelError();
+  DioCancelError cancelled() {
+    return const DioCancelError();
   }
 
-  NetworkNotFoundError notFound(DioError dioError) {
-    return NetworkNotFoundError(
+  DioNotFoundError notFound(DioError dioError) {
+    return DioNotFoundError(
       dioError,
     );
   }
 
-  NetworkResponseError response(DioError dioError) {
-    return NetworkResponseError(
+  DioResponseError response(DioError dioError) {
+    return DioResponseError(
       dioError,
     );
   }
 
-  NetworkServerError server() {
-    return const NetworkServerError();
+  DioServerError server() {
+    return const DioServerError();
   }
 
-  NetworkTimeoutError timeout() {
-    return const NetworkTimeoutError();
+  DioTimeoutError timeout() {
+    return const DioTimeoutError();
   }
 
-  NetworkUnauthorizedError unauthorized(DioError dioError) {
-    return NetworkUnauthorizedError(
+  DioUnauthorizedError unauthorized(DioError dioError) {
+    return DioUnauthorizedError(
       dioError,
     );
   }
 
-  UnkownNetworkError unknown(DioError dioError) {
-    return UnkownNetworkError(
+  UnkownDioError unknown(DioError dioError) {
+    return UnkownDioError(
       dioError,
     );
   }
@@ -84,25 +84,25 @@ mixin _$DioErrorHandle {
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result badRequest(NetworkBadRequestError value),
-    @required Result cancelled(NetworkCancelError value),
-    @required Result notFound(NetworkNotFoundError value),
-    @required Result response(NetworkResponseError value),
-    @required Result server(NetworkServerError value),
-    @required Result timeout(NetworkTimeoutError value),
-    @required Result unauthorized(NetworkUnauthorizedError value),
-    @required Result unknown(UnkownNetworkError value),
+    @required Result badRequest(DioBadRequestError value),
+    @required Result cancelled(DioCancelError value),
+    @required Result notFound(DioNotFoundError value),
+    @required Result response(DioResponseError value),
+    @required Result server(DioServerError value),
+    @required Result timeout(DioTimeoutError value),
+    @required Result unauthorized(DioUnauthorizedError value),
+    @required Result unknown(UnkownDioError value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result badRequest(NetworkBadRequestError value),
-    Result cancelled(NetworkCancelError value),
-    Result notFound(NetworkNotFoundError value),
-    Result response(NetworkResponseError value),
-    Result server(NetworkServerError value),
-    Result timeout(NetworkTimeoutError value),
-    Result unauthorized(NetworkUnauthorizedError value),
-    Result unknown(UnkownNetworkError value),
+    Result badRequest(DioBadRequestError value),
+    Result cancelled(DioCancelError value),
+    Result notFound(DioNotFoundError value),
+    Result response(DioResponseError value),
+    Result server(DioServerError value),
+    Result timeout(DioTimeoutError value),
+    Result unauthorized(DioUnauthorizedError value),
+    Result unknown(UnkownDioError value),
     @required Result orElse(),
   });
 }
@@ -122,35 +122,35 @@ class _$DioErrorHandleCopyWithImpl<$Res>
   final $Res Function(DioErrorHandle) _then;
 }
 
-abstract class $NetworkBadRequestErrorCopyWith<$Res> {
-  factory $NetworkBadRequestErrorCopyWith(NetworkBadRequestError value,
-          $Res Function(NetworkBadRequestError) then) =
-      _$NetworkBadRequestErrorCopyWithImpl<$Res>;
+abstract class $DioBadRequestErrorCopyWith<$Res> {
+  factory $DioBadRequestErrorCopyWith(
+          DioBadRequestError value, $Res Function(DioBadRequestError) then) =
+      _$DioBadRequestErrorCopyWithImpl<$Res>;
   $Res call({DioError dioError});
 }
 
-class _$NetworkBadRequestErrorCopyWithImpl<$Res>
+class _$DioBadRequestErrorCopyWithImpl<$Res>
     extends _$DioErrorHandleCopyWithImpl<$Res>
-    implements $NetworkBadRequestErrorCopyWith<$Res> {
-  _$NetworkBadRequestErrorCopyWithImpl(NetworkBadRequestError _value,
-      $Res Function(NetworkBadRequestError) _then)
-      : super(_value, (v) => _then(v as NetworkBadRequestError));
+    implements $DioBadRequestErrorCopyWith<$Res> {
+  _$DioBadRequestErrorCopyWithImpl(
+      DioBadRequestError _value, $Res Function(DioBadRequestError) _then)
+      : super(_value, (v) => _then(v as DioBadRequestError));
 
   @override
-  NetworkBadRequestError get _value => super._value as NetworkBadRequestError;
+  DioBadRequestError get _value => super._value as DioBadRequestError;
 
   @override
   $Res call({
     Object dioError = freezed,
   }) {
-    return _then(NetworkBadRequestError(
+    return _then(DioBadRequestError(
       dioError == freezed ? _value.dioError : dioError as DioError,
     ));
   }
 }
 
-class _$NetworkBadRequestError implements NetworkBadRequestError {
-  const _$NetworkBadRequestError(this.dioError) : assert(dioError != null);
+class _$DioBadRequestError implements DioBadRequestError {
+  const _$DioBadRequestError(this.dioError) : assert(dioError != null);
 
   @override
   final DioError dioError;
@@ -163,7 +163,7 @@ class _$NetworkBadRequestError implements NetworkBadRequestError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NetworkBadRequestError &&
+        (other is DioBadRequestError &&
             (identical(other.dioError, dioError) ||
                 const DeepCollectionEquality()
                     .equals(other.dioError, dioError)));
@@ -174,9 +174,8 @@ class _$NetworkBadRequestError implements NetworkBadRequestError {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(dioError);
 
   @override
-  $NetworkBadRequestErrorCopyWith<NetworkBadRequestError> get copyWith =>
-      _$NetworkBadRequestErrorCopyWithImpl<NetworkBadRequestError>(
-          this, _$identity);
+  $DioBadRequestErrorCopyWith<DioBadRequestError> get copyWith =>
+      _$DioBadRequestErrorCopyWithImpl<DioBadRequestError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -224,14 +223,14 @@ class _$NetworkBadRequestError implements NetworkBadRequestError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result badRequest(NetworkBadRequestError value),
-    @required Result cancelled(NetworkCancelError value),
-    @required Result notFound(NetworkNotFoundError value),
-    @required Result response(NetworkResponseError value),
-    @required Result server(NetworkServerError value),
-    @required Result timeout(NetworkTimeoutError value),
-    @required Result unauthorized(NetworkUnauthorizedError value),
-    @required Result unknown(UnkownNetworkError value),
+    @required Result badRequest(DioBadRequestError value),
+    @required Result cancelled(DioCancelError value),
+    @required Result notFound(DioNotFoundError value),
+    @required Result response(DioResponseError value),
+    @required Result server(DioServerError value),
+    @required Result timeout(DioTimeoutError value),
+    @required Result unauthorized(DioUnauthorizedError value),
+    @required Result unknown(UnkownDioError value),
   }) {
     assert(badRequest != null);
     assert(cancelled != null);
@@ -247,14 +246,14 @@ class _$NetworkBadRequestError implements NetworkBadRequestError {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result badRequest(NetworkBadRequestError value),
-    Result cancelled(NetworkCancelError value),
-    Result notFound(NetworkNotFoundError value),
-    Result response(NetworkResponseError value),
-    Result server(NetworkServerError value),
-    Result timeout(NetworkTimeoutError value),
-    Result unauthorized(NetworkUnauthorizedError value),
-    Result unknown(UnkownNetworkError value),
+    Result badRequest(DioBadRequestError value),
+    Result cancelled(DioCancelError value),
+    Result notFound(DioNotFoundError value),
+    Result response(DioResponseError value),
+    Result server(DioServerError value),
+    Result timeout(DioTimeoutError value),
+    Result unauthorized(DioUnauthorizedError value),
+    Result unknown(UnkownDioError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -265,33 +264,32 @@ class _$NetworkBadRequestError implements NetworkBadRequestError {
   }
 }
 
-abstract class NetworkBadRequestError implements DioErrorHandle {
-  const factory NetworkBadRequestError(DioError dioError) =
-      _$NetworkBadRequestError;
+abstract class DioBadRequestError implements DioErrorHandle {
+  const factory DioBadRequestError(DioError dioError) = _$DioBadRequestError;
 
   DioError get dioError;
-  $NetworkBadRequestErrorCopyWith<NetworkBadRequestError> get copyWith;
+  $DioBadRequestErrorCopyWith<DioBadRequestError> get copyWith;
 }
 
-abstract class $NetworkCancelErrorCopyWith<$Res> {
-  factory $NetworkCancelErrorCopyWith(
-          NetworkCancelError value, $Res Function(NetworkCancelError) then) =
-      _$NetworkCancelErrorCopyWithImpl<$Res>;
+abstract class $DioCancelErrorCopyWith<$Res> {
+  factory $DioCancelErrorCopyWith(
+          DioCancelError value, $Res Function(DioCancelError) then) =
+      _$DioCancelErrorCopyWithImpl<$Res>;
 }
 
-class _$NetworkCancelErrorCopyWithImpl<$Res>
+class _$DioCancelErrorCopyWithImpl<$Res>
     extends _$DioErrorHandleCopyWithImpl<$Res>
-    implements $NetworkCancelErrorCopyWith<$Res> {
-  _$NetworkCancelErrorCopyWithImpl(
-      NetworkCancelError _value, $Res Function(NetworkCancelError) _then)
-      : super(_value, (v) => _then(v as NetworkCancelError));
+    implements $DioCancelErrorCopyWith<$Res> {
+  _$DioCancelErrorCopyWithImpl(
+      DioCancelError _value, $Res Function(DioCancelError) _then)
+      : super(_value, (v) => _then(v as DioCancelError));
 
   @override
-  NetworkCancelError get _value => super._value as NetworkCancelError;
+  DioCancelError get _value => super._value as DioCancelError;
 }
 
-class _$NetworkCancelError implements NetworkCancelError {
-  const _$NetworkCancelError();
+class _$DioCancelError implements DioCancelError {
+  const _$DioCancelError();
 
   @override
   String toString() {
@@ -300,7 +298,7 @@ class _$NetworkCancelError implements NetworkCancelError {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NetworkCancelError);
+    return identical(this, other) || (other is DioCancelError);
   }
 
   @override
@@ -352,14 +350,14 @@ class _$NetworkCancelError implements NetworkCancelError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result badRequest(NetworkBadRequestError value),
-    @required Result cancelled(NetworkCancelError value),
-    @required Result notFound(NetworkNotFoundError value),
-    @required Result response(NetworkResponseError value),
-    @required Result server(NetworkServerError value),
-    @required Result timeout(NetworkTimeoutError value),
-    @required Result unauthorized(NetworkUnauthorizedError value),
-    @required Result unknown(UnkownNetworkError value),
+    @required Result badRequest(DioBadRequestError value),
+    @required Result cancelled(DioCancelError value),
+    @required Result notFound(DioNotFoundError value),
+    @required Result response(DioResponseError value),
+    @required Result server(DioServerError value),
+    @required Result timeout(DioTimeoutError value),
+    @required Result unauthorized(DioUnauthorizedError value),
+    @required Result unknown(UnkownDioError value),
   }) {
     assert(badRequest != null);
     assert(cancelled != null);
@@ -375,14 +373,14 @@ class _$NetworkCancelError implements NetworkCancelError {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result badRequest(NetworkBadRequestError value),
-    Result cancelled(NetworkCancelError value),
-    Result notFound(NetworkNotFoundError value),
-    Result response(NetworkResponseError value),
-    Result server(NetworkServerError value),
-    Result timeout(NetworkTimeoutError value),
-    Result unauthorized(NetworkUnauthorizedError value),
-    Result unknown(UnkownNetworkError value),
+    Result badRequest(DioBadRequestError value),
+    Result cancelled(DioCancelError value),
+    Result notFound(DioNotFoundError value),
+    Result response(DioResponseError value),
+    Result server(DioServerError value),
+    Result timeout(DioTimeoutError value),
+    Result unauthorized(DioUnauthorizedError value),
+    Result unknown(UnkownDioError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -393,39 +391,39 @@ class _$NetworkCancelError implements NetworkCancelError {
   }
 }
 
-abstract class NetworkCancelError implements DioErrorHandle {
-  const factory NetworkCancelError() = _$NetworkCancelError;
+abstract class DioCancelError implements DioErrorHandle {
+  const factory DioCancelError() = _$DioCancelError;
 }
 
-abstract class $NetworkNotFoundErrorCopyWith<$Res> {
-  factory $NetworkNotFoundErrorCopyWith(NetworkNotFoundError value,
-          $Res Function(NetworkNotFoundError) then) =
-      _$NetworkNotFoundErrorCopyWithImpl<$Res>;
+abstract class $DioNotFoundErrorCopyWith<$Res> {
+  factory $DioNotFoundErrorCopyWith(
+          DioNotFoundError value, $Res Function(DioNotFoundError) then) =
+      _$DioNotFoundErrorCopyWithImpl<$Res>;
   $Res call({DioError dioError});
 }
 
-class _$NetworkNotFoundErrorCopyWithImpl<$Res>
+class _$DioNotFoundErrorCopyWithImpl<$Res>
     extends _$DioErrorHandleCopyWithImpl<$Res>
-    implements $NetworkNotFoundErrorCopyWith<$Res> {
-  _$NetworkNotFoundErrorCopyWithImpl(
-      NetworkNotFoundError _value, $Res Function(NetworkNotFoundError) _then)
-      : super(_value, (v) => _then(v as NetworkNotFoundError));
+    implements $DioNotFoundErrorCopyWith<$Res> {
+  _$DioNotFoundErrorCopyWithImpl(
+      DioNotFoundError _value, $Res Function(DioNotFoundError) _then)
+      : super(_value, (v) => _then(v as DioNotFoundError));
 
   @override
-  NetworkNotFoundError get _value => super._value as NetworkNotFoundError;
+  DioNotFoundError get _value => super._value as DioNotFoundError;
 
   @override
   $Res call({
     Object dioError = freezed,
   }) {
-    return _then(NetworkNotFoundError(
+    return _then(DioNotFoundError(
       dioError == freezed ? _value.dioError : dioError as DioError,
     ));
   }
 }
 
-class _$NetworkNotFoundError implements NetworkNotFoundError {
-  const _$NetworkNotFoundError(this.dioError) : assert(dioError != null);
+class _$DioNotFoundError implements DioNotFoundError {
+  const _$DioNotFoundError(this.dioError) : assert(dioError != null);
 
   @override
   final DioError dioError;
@@ -438,7 +436,7 @@ class _$NetworkNotFoundError implements NetworkNotFoundError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NetworkNotFoundError &&
+        (other is DioNotFoundError &&
             (identical(other.dioError, dioError) ||
                 const DeepCollectionEquality()
                     .equals(other.dioError, dioError)));
@@ -449,9 +447,8 @@ class _$NetworkNotFoundError implements NetworkNotFoundError {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(dioError);
 
   @override
-  $NetworkNotFoundErrorCopyWith<NetworkNotFoundError> get copyWith =>
-      _$NetworkNotFoundErrorCopyWithImpl<NetworkNotFoundError>(
-          this, _$identity);
+  $DioNotFoundErrorCopyWith<DioNotFoundError> get copyWith =>
+      _$DioNotFoundErrorCopyWithImpl<DioNotFoundError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -499,14 +496,14 @@ class _$NetworkNotFoundError implements NetworkNotFoundError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result badRequest(NetworkBadRequestError value),
-    @required Result cancelled(NetworkCancelError value),
-    @required Result notFound(NetworkNotFoundError value),
-    @required Result response(NetworkResponseError value),
-    @required Result server(NetworkServerError value),
-    @required Result timeout(NetworkTimeoutError value),
-    @required Result unauthorized(NetworkUnauthorizedError value),
-    @required Result unknown(UnkownNetworkError value),
+    @required Result badRequest(DioBadRequestError value),
+    @required Result cancelled(DioCancelError value),
+    @required Result notFound(DioNotFoundError value),
+    @required Result response(DioResponseError value),
+    @required Result server(DioServerError value),
+    @required Result timeout(DioTimeoutError value),
+    @required Result unauthorized(DioUnauthorizedError value),
+    @required Result unknown(UnkownDioError value),
   }) {
     assert(badRequest != null);
     assert(cancelled != null);
@@ -522,14 +519,14 @@ class _$NetworkNotFoundError implements NetworkNotFoundError {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result badRequest(NetworkBadRequestError value),
-    Result cancelled(NetworkCancelError value),
-    Result notFound(NetworkNotFoundError value),
-    Result response(NetworkResponseError value),
-    Result server(NetworkServerError value),
-    Result timeout(NetworkTimeoutError value),
-    Result unauthorized(NetworkUnauthorizedError value),
-    Result unknown(UnkownNetworkError value),
+    Result badRequest(DioBadRequestError value),
+    Result cancelled(DioCancelError value),
+    Result notFound(DioNotFoundError value),
+    Result response(DioResponseError value),
+    Result server(DioServerError value),
+    Result timeout(DioTimeoutError value),
+    Result unauthorized(DioUnauthorizedError value),
+    Result unknown(UnkownDioError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -540,43 +537,42 @@ class _$NetworkNotFoundError implements NetworkNotFoundError {
   }
 }
 
-abstract class NetworkNotFoundError implements DioErrorHandle {
-  const factory NetworkNotFoundError(DioError dioError) =
-      _$NetworkNotFoundError;
+abstract class DioNotFoundError implements DioErrorHandle {
+  const factory DioNotFoundError(DioError dioError) = _$DioNotFoundError;
 
   DioError get dioError;
-  $NetworkNotFoundErrorCopyWith<NetworkNotFoundError> get copyWith;
+  $DioNotFoundErrorCopyWith<DioNotFoundError> get copyWith;
 }
 
-abstract class $NetworkResponseErrorCopyWith<$Res> {
-  factory $NetworkResponseErrorCopyWith(NetworkResponseError value,
-          $Res Function(NetworkResponseError) then) =
-      _$NetworkResponseErrorCopyWithImpl<$Res>;
+abstract class $DioResponseErrorCopyWith<$Res> {
+  factory $DioResponseErrorCopyWith(
+          DioResponseError value, $Res Function(DioResponseError) then) =
+      _$DioResponseErrorCopyWithImpl<$Res>;
   $Res call({DioError dioError});
 }
 
-class _$NetworkResponseErrorCopyWithImpl<$Res>
+class _$DioResponseErrorCopyWithImpl<$Res>
     extends _$DioErrorHandleCopyWithImpl<$Res>
-    implements $NetworkResponseErrorCopyWith<$Res> {
-  _$NetworkResponseErrorCopyWithImpl(
-      NetworkResponseError _value, $Res Function(NetworkResponseError) _then)
-      : super(_value, (v) => _then(v as NetworkResponseError));
+    implements $DioResponseErrorCopyWith<$Res> {
+  _$DioResponseErrorCopyWithImpl(
+      DioResponseError _value, $Res Function(DioResponseError) _then)
+      : super(_value, (v) => _then(v as DioResponseError));
 
   @override
-  NetworkResponseError get _value => super._value as NetworkResponseError;
+  DioResponseError get _value => super._value as DioResponseError;
 
   @override
   $Res call({
     Object dioError = freezed,
   }) {
-    return _then(NetworkResponseError(
+    return _then(DioResponseError(
       dioError == freezed ? _value.dioError : dioError as DioError,
     ));
   }
 }
 
-class _$NetworkResponseError implements NetworkResponseError {
-  const _$NetworkResponseError(this.dioError) : assert(dioError != null);
+class _$DioResponseError implements DioResponseError {
+  const _$DioResponseError(this.dioError) : assert(dioError != null);
 
   @override
   final DioError dioError;
@@ -589,7 +585,7 @@ class _$NetworkResponseError implements NetworkResponseError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NetworkResponseError &&
+        (other is DioResponseError &&
             (identical(other.dioError, dioError) ||
                 const DeepCollectionEquality()
                     .equals(other.dioError, dioError)));
@@ -600,9 +596,8 @@ class _$NetworkResponseError implements NetworkResponseError {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(dioError);
 
   @override
-  $NetworkResponseErrorCopyWith<NetworkResponseError> get copyWith =>
-      _$NetworkResponseErrorCopyWithImpl<NetworkResponseError>(
-          this, _$identity);
+  $DioResponseErrorCopyWith<DioResponseError> get copyWith =>
+      _$DioResponseErrorCopyWithImpl<DioResponseError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -650,14 +645,14 @@ class _$NetworkResponseError implements NetworkResponseError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result badRequest(NetworkBadRequestError value),
-    @required Result cancelled(NetworkCancelError value),
-    @required Result notFound(NetworkNotFoundError value),
-    @required Result response(NetworkResponseError value),
-    @required Result server(NetworkServerError value),
-    @required Result timeout(NetworkTimeoutError value),
-    @required Result unauthorized(NetworkUnauthorizedError value),
-    @required Result unknown(UnkownNetworkError value),
+    @required Result badRequest(DioBadRequestError value),
+    @required Result cancelled(DioCancelError value),
+    @required Result notFound(DioNotFoundError value),
+    @required Result response(DioResponseError value),
+    @required Result server(DioServerError value),
+    @required Result timeout(DioTimeoutError value),
+    @required Result unauthorized(DioUnauthorizedError value),
+    @required Result unknown(UnkownDioError value),
   }) {
     assert(badRequest != null);
     assert(cancelled != null);
@@ -673,14 +668,14 @@ class _$NetworkResponseError implements NetworkResponseError {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result badRequest(NetworkBadRequestError value),
-    Result cancelled(NetworkCancelError value),
-    Result notFound(NetworkNotFoundError value),
-    Result response(NetworkResponseError value),
-    Result server(NetworkServerError value),
-    Result timeout(NetworkTimeoutError value),
-    Result unauthorized(NetworkUnauthorizedError value),
-    Result unknown(UnkownNetworkError value),
+    Result badRequest(DioBadRequestError value),
+    Result cancelled(DioCancelError value),
+    Result notFound(DioNotFoundError value),
+    Result response(DioResponseError value),
+    Result server(DioServerError value),
+    Result timeout(DioTimeoutError value),
+    Result unauthorized(DioUnauthorizedError value),
+    Result unknown(UnkownDioError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -691,33 +686,32 @@ class _$NetworkResponseError implements NetworkResponseError {
   }
 }
 
-abstract class NetworkResponseError implements DioErrorHandle {
-  const factory NetworkResponseError(DioError dioError) =
-      _$NetworkResponseError;
+abstract class DioResponseError implements DioErrorHandle {
+  const factory DioResponseError(DioError dioError) = _$DioResponseError;
 
   DioError get dioError;
-  $NetworkResponseErrorCopyWith<NetworkResponseError> get copyWith;
+  $DioResponseErrorCopyWith<DioResponseError> get copyWith;
 }
 
-abstract class $NetworkServerErrorCopyWith<$Res> {
-  factory $NetworkServerErrorCopyWith(
-          NetworkServerError value, $Res Function(NetworkServerError) then) =
-      _$NetworkServerErrorCopyWithImpl<$Res>;
+abstract class $DioServerErrorCopyWith<$Res> {
+  factory $DioServerErrorCopyWith(
+          DioServerError value, $Res Function(DioServerError) then) =
+      _$DioServerErrorCopyWithImpl<$Res>;
 }
 
-class _$NetworkServerErrorCopyWithImpl<$Res>
+class _$DioServerErrorCopyWithImpl<$Res>
     extends _$DioErrorHandleCopyWithImpl<$Res>
-    implements $NetworkServerErrorCopyWith<$Res> {
-  _$NetworkServerErrorCopyWithImpl(
-      NetworkServerError _value, $Res Function(NetworkServerError) _then)
-      : super(_value, (v) => _then(v as NetworkServerError));
+    implements $DioServerErrorCopyWith<$Res> {
+  _$DioServerErrorCopyWithImpl(
+      DioServerError _value, $Res Function(DioServerError) _then)
+      : super(_value, (v) => _then(v as DioServerError));
 
   @override
-  NetworkServerError get _value => super._value as NetworkServerError;
+  DioServerError get _value => super._value as DioServerError;
 }
 
-class _$NetworkServerError implements NetworkServerError {
-  const _$NetworkServerError();
+class _$DioServerError implements DioServerError {
+  const _$DioServerError();
 
   @override
   String toString() {
@@ -726,7 +720,7 @@ class _$NetworkServerError implements NetworkServerError {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NetworkServerError);
+    return identical(this, other) || (other is DioServerError);
   }
 
   @override
@@ -778,14 +772,14 @@ class _$NetworkServerError implements NetworkServerError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result badRequest(NetworkBadRequestError value),
-    @required Result cancelled(NetworkCancelError value),
-    @required Result notFound(NetworkNotFoundError value),
-    @required Result response(NetworkResponseError value),
-    @required Result server(NetworkServerError value),
-    @required Result timeout(NetworkTimeoutError value),
-    @required Result unauthorized(NetworkUnauthorizedError value),
-    @required Result unknown(UnkownNetworkError value),
+    @required Result badRequest(DioBadRequestError value),
+    @required Result cancelled(DioCancelError value),
+    @required Result notFound(DioNotFoundError value),
+    @required Result response(DioResponseError value),
+    @required Result server(DioServerError value),
+    @required Result timeout(DioTimeoutError value),
+    @required Result unauthorized(DioUnauthorizedError value),
+    @required Result unknown(UnkownDioError value),
   }) {
     assert(badRequest != null);
     assert(cancelled != null);
@@ -801,14 +795,14 @@ class _$NetworkServerError implements NetworkServerError {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result badRequest(NetworkBadRequestError value),
-    Result cancelled(NetworkCancelError value),
-    Result notFound(NetworkNotFoundError value),
-    Result response(NetworkResponseError value),
-    Result server(NetworkServerError value),
-    Result timeout(NetworkTimeoutError value),
-    Result unauthorized(NetworkUnauthorizedError value),
-    Result unknown(UnkownNetworkError value),
+    Result badRequest(DioBadRequestError value),
+    Result cancelled(DioCancelError value),
+    Result notFound(DioNotFoundError value),
+    Result response(DioResponseError value),
+    Result server(DioServerError value),
+    Result timeout(DioTimeoutError value),
+    Result unauthorized(DioUnauthorizedError value),
+    Result unknown(UnkownDioError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -819,29 +813,29 @@ class _$NetworkServerError implements NetworkServerError {
   }
 }
 
-abstract class NetworkServerError implements DioErrorHandle {
-  const factory NetworkServerError() = _$NetworkServerError;
+abstract class DioServerError implements DioErrorHandle {
+  const factory DioServerError() = _$DioServerError;
 }
 
-abstract class $NetworkTimeoutErrorCopyWith<$Res> {
-  factory $NetworkTimeoutErrorCopyWith(
-          NetworkTimeoutError value, $Res Function(NetworkTimeoutError) then) =
-      _$NetworkTimeoutErrorCopyWithImpl<$Res>;
+abstract class $DioTimeoutErrorCopyWith<$Res> {
+  factory $DioTimeoutErrorCopyWith(
+          DioTimeoutError value, $Res Function(DioTimeoutError) then) =
+      _$DioTimeoutErrorCopyWithImpl<$Res>;
 }
 
-class _$NetworkTimeoutErrorCopyWithImpl<$Res>
+class _$DioTimeoutErrorCopyWithImpl<$Res>
     extends _$DioErrorHandleCopyWithImpl<$Res>
-    implements $NetworkTimeoutErrorCopyWith<$Res> {
-  _$NetworkTimeoutErrorCopyWithImpl(
-      NetworkTimeoutError _value, $Res Function(NetworkTimeoutError) _then)
-      : super(_value, (v) => _then(v as NetworkTimeoutError));
+    implements $DioTimeoutErrorCopyWith<$Res> {
+  _$DioTimeoutErrorCopyWithImpl(
+      DioTimeoutError _value, $Res Function(DioTimeoutError) _then)
+      : super(_value, (v) => _then(v as DioTimeoutError));
 
   @override
-  NetworkTimeoutError get _value => super._value as NetworkTimeoutError;
+  DioTimeoutError get _value => super._value as DioTimeoutError;
 }
 
-class _$NetworkTimeoutError implements NetworkTimeoutError {
-  const _$NetworkTimeoutError();
+class _$DioTimeoutError implements DioTimeoutError {
+  const _$DioTimeoutError();
 
   @override
   String toString() {
@@ -850,7 +844,7 @@ class _$NetworkTimeoutError implements NetworkTimeoutError {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NetworkTimeoutError);
+    return identical(this, other) || (other is DioTimeoutError);
   }
 
   @override
@@ -902,14 +896,14 @@ class _$NetworkTimeoutError implements NetworkTimeoutError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result badRequest(NetworkBadRequestError value),
-    @required Result cancelled(NetworkCancelError value),
-    @required Result notFound(NetworkNotFoundError value),
-    @required Result response(NetworkResponseError value),
-    @required Result server(NetworkServerError value),
-    @required Result timeout(NetworkTimeoutError value),
-    @required Result unauthorized(NetworkUnauthorizedError value),
-    @required Result unknown(UnkownNetworkError value),
+    @required Result badRequest(DioBadRequestError value),
+    @required Result cancelled(DioCancelError value),
+    @required Result notFound(DioNotFoundError value),
+    @required Result response(DioResponseError value),
+    @required Result server(DioServerError value),
+    @required Result timeout(DioTimeoutError value),
+    @required Result unauthorized(DioUnauthorizedError value),
+    @required Result unknown(UnkownDioError value),
   }) {
     assert(badRequest != null);
     assert(cancelled != null);
@@ -925,14 +919,14 @@ class _$NetworkTimeoutError implements NetworkTimeoutError {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result badRequest(NetworkBadRequestError value),
-    Result cancelled(NetworkCancelError value),
-    Result notFound(NetworkNotFoundError value),
-    Result response(NetworkResponseError value),
-    Result server(NetworkServerError value),
-    Result timeout(NetworkTimeoutError value),
-    Result unauthorized(NetworkUnauthorizedError value),
-    Result unknown(UnkownNetworkError value),
+    Result badRequest(DioBadRequestError value),
+    Result cancelled(DioCancelError value),
+    Result notFound(DioNotFoundError value),
+    Result response(DioResponseError value),
+    Result server(DioServerError value),
+    Result timeout(DioTimeoutError value),
+    Result unauthorized(DioUnauthorizedError value),
+    Result unknown(UnkownDioError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -943,40 +937,39 @@ class _$NetworkTimeoutError implements NetworkTimeoutError {
   }
 }
 
-abstract class NetworkTimeoutError implements DioErrorHandle {
-  const factory NetworkTimeoutError() = _$NetworkTimeoutError;
+abstract class DioTimeoutError implements DioErrorHandle {
+  const factory DioTimeoutError() = _$DioTimeoutError;
 }
 
-abstract class $NetworkUnauthorizedErrorCopyWith<$Res> {
-  factory $NetworkUnauthorizedErrorCopyWith(NetworkUnauthorizedError value,
-          $Res Function(NetworkUnauthorizedError) then) =
-      _$NetworkUnauthorizedErrorCopyWithImpl<$Res>;
+abstract class $DioUnauthorizedErrorCopyWith<$Res> {
+  factory $DioUnauthorizedErrorCopyWith(DioUnauthorizedError value,
+          $Res Function(DioUnauthorizedError) then) =
+      _$DioUnauthorizedErrorCopyWithImpl<$Res>;
   $Res call({DioError dioError});
 }
 
-class _$NetworkUnauthorizedErrorCopyWithImpl<$Res>
+class _$DioUnauthorizedErrorCopyWithImpl<$Res>
     extends _$DioErrorHandleCopyWithImpl<$Res>
-    implements $NetworkUnauthorizedErrorCopyWith<$Res> {
-  _$NetworkUnauthorizedErrorCopyWithImpl(NetworkUnauthorizedError _value,
-      $Res Function(NetworkUnauthorizedError) _then)
-      : super(_value, (v) => _then(v as NetworkUnauthorizedError));
+    implements $DioUnauthorizedErrorCopyWith<$Res> {
+  _$DioUnauthorizedErrorCopyWithImpl(
+      DioUnauthorizedError _value, $Res Function(DioUnauthorizedError) _then)
+      : super(_value, (v) => _then(v as DioUnauthorizedError));
 
   @override
-  NetworkUnauthorizedError get _value =>
-      super._value as NetworkUnauthorizedError;
+  DioUnauthorizedError get _value => super._value as DioUnauthorizedError;
 
   @override
   $Res call({
     Object dioError = freezed,
   }) {
-    return _then(NetworkUnauthorizedError(
+    return _then(DioUnauthorizedError(
       dioError == freezed ? _value.dioError : dioError as DioError,
     ));
   }
 }
 
-class _$NetworkUnauthorizedError implements NetworkUnauthorizedError {
-  const _$NetworkUnauthorizedError(this.dioError) : assert(dioError != null);
+class _$DioUnauthorizedError implements DioUnauthorizedError {
+  const _$DioUnauthorizedError(this.dioError) : assert(dioError != null);
 
   @override
   final DioError dioError;
@@ -989,7 +982,7 @@ class _$NetworkUnauthorizedError implements NetworkUnauthorizedError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NetworkUnauthorizedError &&
+        (other is DioUnauthorizedError &&
             (identical(other.dioError, dioError) ||
                 const DeepCollectionEquality()
                     .equals(other.dioError, dioError)));
@@ -1000,8 +993,8 @@ class _$NetworkUnauthorizedError implements NetworkUnauthorizedError {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(dioError);
 
   @override
-  $NetworkUnauthorizedErrorCopyWith<NetworkUnauthorizedError> get copyWith =>
-      _$NetworkUnauthorizedErrorCopyWithImpl<NetworkUnauthorizedError>(
+  $DioUnauthorizedErrorCopyWith<DioUnauthorizedError> get copyWith =>
+      _$DioUnauthorizedErrorCopyWithImpl<DioUnauthorizedError>(
           this, _$identity);
 
   @override
@@ -1050,14 +1043,14 @@ class _$NetworkUnauthorizedError implements NetworkUnauthorizedError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result badRequest(NetworkBadRequestError value),
-    @required Result cancelled(NetworkCancelError value),
-    @required Result notFound(NetworkNotFoundError value),
-    @required Result response(NetworkResponseError value),
-    @required Result server(NetworkServerError value),
-    @required Result timeout(NetworkTimeoutError value),
-    @required Result unauthorized(NetworkUnauthorizedError value),
-    @required Result unknown(UnkownNetworkError value),
+    @required Result badRequest(DioBadRequestError value),
+    @required Result cancelled(DioCancelError value),
+    @required Result notFound(DioNotFoundError value),
+    @required Result response(DioResponseError value),
+    @required Result server(DioServerError value),
+    @required Result timeout(DioTimeoutError value),
+    @required Result unauthorized(DioUnauthorizedError value),
+    @required Result unknown(UnkownDioError value),
   }) {
     assert(badRequest != null);
     assert(cancelled != null);
@@ -1073,14 +1066,14 @@ class _$NetworkUnauthorizedError implements NetworkUnauthorizedError {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result badRequest(NetworkBadRequestError value),
-    Result cancelled(NetworkCancelError value),
-    Result notFound(NetworkNotFoundError value),
-    Result response(NetworkResponseError value),
-    Result server(NetworkServerError value),
-    Result timeout(NetworkTimeoutError value),
-    Result unauthorized(NetworkUnauthorizedError value),
-    Result unknown(UnkownNetworkError value),
+    Result badRequest(DioBadRequestError value),
+    Result cancelled(DioCancelError value),
+    Result notFound(DioNotFoundError value),
+    Result response(DioResponseError value),
+    Result server(DioServerError value),
+    Result timeout(DioTimeoutError value),
+    Result unauthorized(DioUnauthorizedError value),
+    Result unknown(UnkownDioError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1091,43 +1084,43 @@ class _$NetworkUnauthorizedError implements NetworkUnauthorizedError {
   }
 }
 
-abstract class NetworkUnauthorizedError implements DioErrorHandle {
-  const factory NetworkUnauthorizedError(DioError dioError) =
-      _$NetworkUnauthorizedError;
+abstract class DioUnauthorizedError implements DioErrorHandle {
+  const factory DioUnauthorizedError(DioError dioError) =
+      _$DioUnauthorizedError;
 
   DioError get dioError;
-  $NetworkUnauthorizedErrorCopyWith<NetworkUnauthorizedError> get copyWith;
+  $DioUnauthorizedErrorCopyWith<DioUnauthorizedError> get copyWith;
 }
 
-abstract class $UnkownNetworkErrorCopyWith<$Res> {
-  factory $UnkownNetworkErrorCopyWith(
-          UnkownNetworkError value, $Res Function(UnkownNetworkError) then) =
-      _$UnkownNetworkErrorCopyWithImpl<$Res>;
+abstract class $UnkownDioErrorCopyWith<$Res> {
+  factory $UnkownDioErrorCopyWith(
+          UnkownDioError value, $Res Function(UnkownDioError) then) =
+      _$UnkownDioErrorCopyWithImpl<$Res>;
   $Res call({DioError dioError});
 }
 
-class _$UnkownNetworkErrorCopyWithImpl<$Res>
+class _$UnkownDioErrorCopyWithImpl<$Res>
     extends _$DioErrorHandleCopyWithImpl<$Res>
-    implements $UnkownNetworkErrorCopyWith<$Res> {
-  _$UnkownNetworkErrorCopyWithImpl(
-      UnkownNetworkError _value, $Res Function(UnkownNetworkError) _then)
-      : super(_value, (v) => _then(v as UnkownNetworkError));
+    implements $UnkownDioErrorCopyWith<$Res> {
+  _$UnkownDioErrorCopyWithImpl(
+      UnkownDioError _value, $Res Function(UnkownDioError) _then)
+      : super(_value, (v) => _then(v as UnkownDioError));
 
   @override
-  UnkownNetworkError get _value => super._value as UnkownNetworkError;
+  UnkownDioError get _value => super._value as UnkownDioError;
 
   @override
   $Res call({
     Object dioError = freezed,
   }) {
-    return _then(UnkownNetworkError(
+    return _then(UnkownDioError(
       dioError == freezed ? _value.dioError : dioError as DioError,
     ));
   }
 }
 
-class _$UnkownNetworkError implements UnkownNetworkError {
-  const _$UnkownNetworkError(this.dioError) : assert(dioError != null);
+class _$UnkownDioError implements UnkownDioError {
+  const _$UnkownDioError(this.dioError) : assert(dioError != null);
 
   @override
   final DioError dioError;
@@ -1140,7 +1133,7 @@ class _$UnkownNetworkError implements UnkownNetworkError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is UnkownNetworkError &&
+        (other is UnkownDioError &&
             (identical(other.dioError, dioError) ||
                 const DeepCollectionEquality()
                     .equals(other.dioError, dioError)));
@@ -1151,8 +1144,8 @@ class _$UnkownNetworkError implements UnkownNetworkError {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(dioError);
 
   @override
-  $UnkownNetworkErrorCopyWith<UnkownNetworkError> get copyWith =>
-      _$UnkownNetworkErrorCopyWithImpl<UnkownNetworkError>(this, _$identity);
+  $UnkownDioErrorCopyWith<UnkownDioError> get copyWith =>
+      _$UnkownDioErrorCopyWithImpl<UnkownDioError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1200,14 +1193,14 @@ class _$UnkownNetworkError implements UnkownNetworkError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result badRequest(NetworkBadRequestError value),
-    @required Result cancelled(NetworkCancelError value),
-    @required Result notFound(NetworkNotFoundError value),
-    @required Result response(NetworkResponseError value),
-    @required Result server(NetworkServerError value),
-    @required Result timeout(NetworkTimeoutError value),
-    @required Result unauthorized(NetworkUnauthorizedError value),
-    @required Result unknown(UnkownNetworkError value),
+    @required Result badRequest(DioBadRequestError value),
+    @required Result cancelled(DioCancelError value),
+    @required Result notFound(DioNotFoundError value),
+    @required Result response(DioResponseError value),
+    @required Result server(DioServerError value),
+    @required Result timeout(DioTimeoutError value),
+    @required Result unauthorized(DioUnauthorizedError value),
+    @required Result unknown(UnkownDioError value),
   }) {
     assert(badRequest != null);
     assert(cancelled != null);
@@ -1223,14 +1216,14 @@ class _$UnkownNetworkError implements UnkownNetworkError {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result badRequest(NetworkBadRequestError value),
-    Result cancelled(NetworkCancelError value),
-    Result notFound(NetworkNotFoundError value),
-    Result response(NetworkResponseError value),
-    Result server(NetworkServerError value),
-    Result timeout(NetworkTimeoutError value),
-    Result unauthorized(NetworkUnauthorizedError value),
-    Result unknown(UnkownNetworkError value),
+    Result badRequest(DioBadRequestError value),
+    Result cancelled(DioCancelError value),
+    Result notFound(DioNotFoundError value),
+    Result response(DioResponseError value),
+    Result server(DioServerError value),
+    Result timeout(DioTimeoutError value),
+    Result unauthorized(DioUnauthorizedError value),
+    Result unknown(UnkownDioError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1241,9 +1234,9 @@ class _$UnkownNetworkError implements UnkownNetworkError {
   }
 }
 
-abstract class UnkownNetworkError implements DioErrorHandle {
-  const factory UnkownNetworkError(DioError dioError) = _$UnkownNetworkError;
+abstract class UnkownDioError implements DioErrorHandle {
+  const factory UnkownDioError(DioError dioError) = _$UnkownDioError;
 
   DioError get dioError;
-  $UnkownNetworkErrorCopyWith<UnkownNetworkError> get copyWith;
+  $UnkownDioErrorCopyWith<UnkownDioError> get copyWith;
 }
