@@ -11,6 +11,18 @@ class AuthRemoteSourceImp implements AuthRemoteSource {
   const AuthRemoteSourceImp(this._dio);
 
   @override
+  Future<Either<SignInFailure, UserDTO>> signIn(
+      SignInRequestFormDTO requestForm) async {
+    try {
+      return await _signIn(requestForm);
+    } on DioError catch (error) {
+      return _handleSignInError(error);
+    } catch (error) {
+      return left(const UnexpectedSignInError());
+    }
+  }
+
+  @override
   Future<Either<SignUpFailure, UserDTO>> signUp(
       SignUpRequestFormDTO requestForm) async {
     try {
@@ -20,6 +32,18 @@ class AuthRemoteSourceImp implements AuthRemoteSource {
     } catch (error) {
       return left(const UnexpectedSignUpError());
     }
+  }
+
+  Either<SignInFailure, UserDTO> _handleSignInError(DioError error) {
+    final failure = error.handle().maybeWhen(
+          server: () => const SignInNetworkError(NetworkServerError()),
+          badRequest: (dioError) =>
+              dioError.response.checkStatus('InvalidEmailOrPassword')
+                  ? const InvalidPasswordOrEmailError()
+                  : const SignInNetworkError(UnknownNetworkError()),
+          orElse: () => const SignInNetworkError(UnknownNetworkError()),
+        );
+    return left(failure);
   }
 
   Either<SignUpFailure, UserDTO> _handleSignUpError(DioError error) {
@@ -32,6 +56,14 @@ class AuthRemoteSourceImp implements AuthRemoteSource {
           orElse: () => const SignUpNetworkError(UnknownNetworkError()),
         );
     return left(failure);
+  }
+
+  Future<Either<SignInFailure, UserDTO>> _signIn(
+      SignInRequestFormDTO requestForm) async {
+    const path = '$_path/signIn';
+    final response = await _dio.post(path, data: requestForm.toJson());
+    final user = UserDTO.fromJson(response.getData());
+    return right(user);
   }
 
   Future<Either<SignUpFailure, UserDTO>> _signUp(

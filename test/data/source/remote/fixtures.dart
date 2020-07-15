@@ -1,5 +1,19 @@
 // ignore_for_file: lines_longer_than_80_chars
-Map<String, dynamic> get signUpSuccessResult {
+Map<String, dynamic> get emailAlreadyRegisteredError {
+  return {
+    'status': 'EmailAlreadyExists',
+    'message': 'user already exists with email tony@gmail.com'
+  };
+}
+
+Map<String, dynamic> get invalidEmailOrPasswordError {
+  return {
+    'status': 'InvalidEmailOrPassword',
+    'message': 'Invalid email or password'
+  };
+}
+
+Map<String, dynamic> get signUpOrSignInSuccessResult {
   return {
     'data': {
       'firstName': 'Toney',
@@ -18,12 +32,5 @@ Map<String, dynamic> get signUpSuccessResult {
       }
     },
     'status': 'Created'
-  };
-}
-
-Map<String, dynamic> get emailAlreadyRegisteredError {
-  return {
-    'status': 'EmailAlreadyExists',
-    'message': 'user already exists with email tony@gmail.com'
   };
 }

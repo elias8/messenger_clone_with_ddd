@@ -7,6 +7,13 @@ class AuthRepositoryImp implements AuthRepository {
   const AuthRepositoryImp(this._authRemoteSource);
 
   @override
+  Future<Either<SignInFailure, Unit>> signIn(
+      SignInRequestForm signInForm) async {
+    final result = await _authRemoteSource.signIn(signInForm.toDTO());
+    return result.fold(left, (r) => right(unit));
+  }
+
+  @override
   Future<Either<SignUpFailure, Unit>> signUp(
       SignUpRequestForm signUpForm) async {
     final result = await _authRemoteSource.signUp(signUpForm.toDTO());
