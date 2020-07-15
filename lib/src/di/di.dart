@@ -15,15 +15,10 @@ class DependencyInjector {
   }
 
   static Future<void> _injectApplicationLayer() async {
-    getIt..registerFactory<AuthRepository>(() => AuthRepositoryImp(getIt()));
-  }
-
-  static Future<void> _injectInfrastructureLayer() async {
     getIt
-      ..registerFactory(() => Dio(BaseOptions(
-          baseUrl: 'http://10.0.2.2:3000/v1/',
-          connectTimeout: 30000,
-          sendTimeout: 30000)));
+      ..registerFactory<AuthRepository>(() => AuthRepositoryImp(getIt()))
+      ..registerFactory(() => SignInCubit(getIt()))
+      ..registerFactory(() => SignUpCubit(getIt()));
   }
 
   static Future<void> _injectDataLayer() async {
@@ -33,10 +28,17 @@ class DependencyInjector {
 
   static Future<void> _injectDomainLayer() async {}
 
+  static Future<void> _injectInfrastructureLayer() async {
+    getIt
+      ..registerFactory(() => Dio(BaseOptions(
+          baseUrl: 'http://10.0.2.2:3000/v1/',
+          connectTimeout: 30000,
+          sendTimeout: 30000)));
+  }
+
   static Future<void> _injectPresentationLayer() async {
     getIt
       ..registerFactory(() => ThemeCubit())
-      ..registerFactory(() => HomePageCubit())
-      ..registerFactory(() => SignUpCubit(getIt()));
+      ..registerFactory(() => HomePageCubit());
   }
 }

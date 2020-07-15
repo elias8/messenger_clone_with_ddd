@@ -5,19 +5,21 @@
 // **************************************************************************
 
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:messenger_clone/src/ui/screens/sign_in/sign_in.dart';
 import 'package:messenger_clone/src/ui/screens/sign_up/sign_up_screen.dart';
 import 'package:messenger_clone/src/ui/screens/home_screen/home_screen.dart';
 import 'package:messenger_clone/src/ui/screens/chat_screen/chat_screen.dart';
 import 'package:messenger_clone/src/ui/screens/profile_screen/profile_screen.dart';
 
 abstract class Routes {
-  static const signUpScreen = '/';
+  static const signInScreen = '/';
+  static const signUpScreen = '/sign-up-screen';
   static const homeScreen = '/home-screen';
   static const chatScreen = '/chat-screen';
   static const profileScreen = '/profile-screen';
   static const all = {
+    signInScreen,
     signUpScreen,
     homeScreen,
     chatScreen,
@@ -37,6 +39,17 @@ class Router extends RouterBase {
   Route<dynamic> onGenerateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
+      case Routes.signInScreen:
+        if (hasInvalidArgs<SignInScreenArguments>(args)) {
+          return misTypedArgsRoute<SignInScreenArguments>(args);
+        }
+        final typedArgs =
+            args as SignInScreenArguments ?? SignInScreenArguments();
+        return MaterialPageRoute<dynamic>(
+          builder: (context) =>
+              SignInScreen(key: typedArgs.key).wrappedRoute(context),
+          settings: settings,
+        );
       case Routes.signUpScreen:
         return MaterialPageRoute<dynamic>(
           builder: (context) => SignUpScreen().wrappedRoute(context),
@@ -76,6 +89,12 @@ class Router extends RouterBase {
 // *************************************************************************
 // Arguments holder classes
 // **************************************************************************
+
+//SignInScreen arguments holder class
+class SignInScreenArguments {
+  final Key key;
+  SignInScreenArguments({this.key});
+}
 
 //HomeScreen arguments holder class
 class HomeScreenArguments {

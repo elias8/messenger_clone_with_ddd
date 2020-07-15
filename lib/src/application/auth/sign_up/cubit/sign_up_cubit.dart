@@ -51,7 +51,7 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   void submitForm() {
     if (_signUpForm.isFormValid()) {
-      _setSubmittingStateAndSignUp();
+      _emitSubmittingStateAndSignUp();
     } else {
       _emitShowErrorState();
     }
@@ -72,7 +72,7 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   void _emitSubmittingState() => emit(const SubmittingSignUpRequestFormState());
 
-  void _setSubmittingStateAndSignUp() {
+  void _emitSubmittingStateAndSignUp() {
     _emitSubmittingState();
     _signUp();
   }

@@ -1,7 +1,7 @@
-part of 'index.dart';
+part of 'widgets.dart';
 
-class SignUpOptions extends StatelessWidget {
-  const SignUpOptions({Key key}) : super(key: key);
+class SignInOptions extends StatelessWidget {
+  const SignInOptions({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,22 +9,22 @@ class SignUpOptions extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          'Already have account?',
+          'Not have account yet?',
           style: context.theme.textTheme.headline6.copyWith(
             fontSize: 16,
           ),
         ),
         GestureDetector(
-          onTap: () => context.cubit<SignUpCubit>().state.maybeWhen(
+          onTap: () => context.cubit<SignInCubit>().state.maybeWhen(
                 submitting: () => null,
                 orElse: () => context.navigator.pushReplacementNamed(
-                  Routes.signInScreen,
+                  Routes.signUpScreen,
                 ),
               ),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              'Sign In.',
+              'Sign up.',
               style: TextStyle(
                 color: Colors.blue,
                 decoration: TextDecoration.underline,

@@ -28,9 +28,9 @@ class SignInCubit extends Cubit<SignInstate> {
     _emitEditingState();
   }
 
-  void signIn() {
+  void submitForm() {
     if (_signInForm.isFormValid()) {
-      _signIn();
+      _emitSubmittingStateAndSignIn();
     } else {
       _emitShowErrorState();
     }
@@ -47,6 +47,13 @@ class SignInCubit extends Cubit<SignInstate> {
   void _emitShowErrorState() {
     _showError = true;
     _emitEditingState();
+  }
+
+  void _emitSubmittingState() => emit(const SubmittingSignInFormState());
+
+  void _emitSubmittingStateAndSignIn() {
+    _emitSubmittingState();
+    _signIn();
   }
 
   void _signIn() async {
