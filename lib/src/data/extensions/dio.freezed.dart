@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: lines_longer_than_80_chars, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'dio.dart';
 
@@ -12,42 +12,50 @@ T _$identity<T>(T value) => value;
 class _$DioErrorHandleTearOff {
   const _$DioErrorHandleTearOff();
 
+// ignore: unused_element
   DioBadRequestError badRequest(DioError dioError) {
     return DioBadRequestError(
       dioError,
     );
   }
 
+// ignore: unused_element
   DioCancelError cancelled() {
     return const DioCancelError();
   }
 
+// ignore: unused_element
   DioNotFoundError notFound(DioError dioError) {
     return DioNotFoundError(
       dioError,
     );
   }
 
+// ignore: unused_element
   DioResponseError response(DioError dioError) {
     return DioResponseError(
       dioError,
     );
   }
 
+// ignore: unused_element
   DioServerError server() {
     return const DioServerError();
   }
 
+// ignore: unused_element
   DioTimeoutError timeout() {
     return const DioTimeoutError();
   }
 
+// ignore: unused_element
   DioUnauthorizedError unauthorized(DioError dioError) {
     return DioUnauthorizedError(
       dioError,
     );
   }
 
+// ignore: unused_element
   UnkownDioError unknown(DioError dioError) {
     return UnkownDioError(
       dioError,

@@ -15,7 +15,7 @@ class SignUpCubit extends Cubit<SignUpState> {
       : assert(authFacade != null),
         _authFacade = authFacade,
         _signUpForm = SignUpRequestForm.initial(),
-        super(initialState: SignUpState.initial());
+        super(SignUpState.initial());
 
   void onConfirmationPasswordChanged(String passwordConfirmation) {
     final password = _signUpForm.password.getOrElse('');

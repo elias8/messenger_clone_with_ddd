@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: lines_longer_than_80_chars, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'sign_up_cubit.dart';
 
@@ -12,6 +12,7 @@ T _$identity<T>(T value) => value;
 class _$SignUpStateTearOff {
   const _$SignUpStateTearOff();
 
+// ignore: unused_element
   EditingSignUpRequestFormState editing(
       {@required bool showError, @required SignUpRequestForm signUpForm}) {
     return EditingSignUpRequestFormState(
@@ -20,12 +21,14 @@ class _$SignUpStateTearOff {
     );
   }
 
+// ignore: unused_element
   SignUpResultLoadedState signUpResult(Either<SignUpFailure, Unit> result) {
     return SignUpResultLoadedState(
       result,
     );
   }
 
+// ignore: unused_element
   SubmittingSignUpRequestFormState submitting() {
     return const SubmittingSignUpRequestFormState();
   }

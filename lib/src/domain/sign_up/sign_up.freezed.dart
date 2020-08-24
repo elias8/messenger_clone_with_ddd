@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: lines_longer_than_80_chars, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'sign_up.dart';
 
@@ -12,18 +12,22 @@ T _$identity<T>(T value) => value;
 class _$PasswordStrengthTearOff {
   const _$PasswordStrengthTearOff();
 
+// ignore: unused_element
   GoodPasswordStrength good() {
     return const GoodPasswordStrength();
   }
 
+// ignore: unused_element
   StrongPasswordStrength strong() {
     return const StrongPasswordStrength();
   }
 
+// ignore: unused_element
   VeryStrongPasswordStrength veryStrong() {
     return const VeryStrongPasswordStrength();
   }
 
+// ignore: unused_element
   WeakPasswordStrength weak() {
     return const WeakPasswordStrength();
   }
@@ -484,10 +488,12 @@ abstract class WeakPasswordStrength implements PasswordStrength {
 class _$EmailValidationErrorTearOff {
   const _$EmailValidationErrorTearOff();
 
+// ignore: unused_element
   EmptyEmailAddress empty() {
     return const EmptyEmailAddress();
   }
 
+// ignore: unused_element
   InvalidEmailAddress invalid() {
     return const InvalidEmailAddress();
   }
@@ -715,14 +721,17 @@ abstract class InvalidEmailAddress implements EmailValidationError {
 class _$NameValidationErrorTearOff {
   const _$NameValidationErrorTearOff();
 
+// ignore: unused_element
   EmptyNameError empty() {
     return const EmptyNameError();
   }
 
+// ignore: unused_element
   NameTooLongError long() {
     return const NameTooLongError();
   }
 
+// ignore: unused_element
   NameTooShortError short() {
     return const NameTooShortError();
   }
@@ -1060,18 +1069,22 @@ abstract class NameTooShortError implements NameValidationError {
 class _$PasswordValidationErrorTearOff {
   const _$PasswordValidationErrorTearOff();
 
+// ignore: unused_element
   PasswordConfirmationError confirmationFailed() {
     return const PasswordConfirmationError();
   }
 
+// ignore: unused_element
   EmptyPasswordError empty() {
     return const EmptyPasswordError();
   }
 
+// ignore: unused_element
   PasswordTooLogError tooLong() {
     return const PasswordTooLogError();
   }
 
+// ignore: unused_element
   PasswordTooShortError tooShort() {
     return const PasswordTooShortError();
   }

@@ -34,7 +34,7 @@ class SignUpForm extends StatelessWidget {
             Scaffold.of(context).showSnackBar(SnackBar(content: Text(error)));
             return null;
           },
-          (r) => context.navigator.pushNamed(Routes.homeScreen),
+          (r) => context.navigator.push(Routes.homeScreen),
         ),
         orElse: () => null,
       ),

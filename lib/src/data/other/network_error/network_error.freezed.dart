@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: lines_longer_than_80_chars, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'network_error.dart';
 
@@ -12,22 +12,27 @@ T _$identity<T>(T value) => value;
 class _$NetworkErrorTearOff {
   const _$NetworkErrorTearOff();
 
+// ignore: unused_element
   NetworkCancelError cancelled() {
     return const NetworkCancelError();
   }
 
+// ignore: unused_element
   NetworkServerError server() {
     return const NetworkServerError();
   }
 
+// ignore: unused_element
   NetworkTimeoutError timeout() {
     return const NetworkTimeoutError();
   }
 
+// ignore: unused_element
   NetworkUnauthorizedError unauthorized() {
     return const NetworkUnauthorizedError();
   }
 
+// ignore: unused_element
   UnknownNetworkError unknown() {
     return const UnknownNetworkError();
   }

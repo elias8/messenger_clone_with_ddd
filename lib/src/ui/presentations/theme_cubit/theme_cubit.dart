@@ -5,7 +5,7 @@ part 'theme_cubit.freezed.dart';
 part 'theme_state.dart';
 
 class ThemeCubit extends Cubit<ThemeState> {
-  ThemeCubit() : super(initialState: const LightThemeSelectedState());
+  ThemeCubit() : super(const LightThemeSelectedState());
 
   void setDarkTheme() => emit(const DarkThemeSelectedState());
 

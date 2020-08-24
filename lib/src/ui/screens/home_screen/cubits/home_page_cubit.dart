@@ -6,7 +6,7 @@ part 'home_page_cubit.freezed.dart';
 part 'home_page_state.dart';
 
 class HomePageCubit extends Cubit<HomePageState> {
-  HomePageCubit() : super(initialState: const ChatsPageState());
+  HomePageCubit() : super(const ChatsPageState());
 
   void showChatPage() => emit(const ChatsPageState());
 

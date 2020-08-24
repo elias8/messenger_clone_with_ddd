@@ -4,21 +4,20 @@
 // AutoRouteGenerator
 // **************************************************************************
 
-import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
-import 'package:messenger_clone/src/ui/screens/sign_in/sign_in.dart';
-import 'package:messenger_clone/src/ui/screens/sign_up/sign_up_screen.dart';
-import 'package:messenger_clone/src/ui/screens/home_screen/home_screen.dart';
-import 'package:messenger_clone/src/ui/screens/chat_screen/chat_screen.dart';
-import 'package:messenger_clone/src/ui/screens/profile_screen/profile_screen.dart';
+// ignore_for_file: public_member_api_docs
 
-abstract class Routes {
-  static const signInScreen = '/';
-  static const signUpScreen = '/sign-up-screen';
-  static const homeScreen = '/home-screen';
-  static const chatScreen = '/chat-screen';
-  static const profileScreen = '/profile-screen';
-  static const all = {
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+
+import '../ui.dart';
+
+class Routes {
+  static const String signInScreen = '/';
+  static const String signUpScreen = '/sign-up-screen';
+  static const String homeScreen = '/home-screen';
+  static const String chatScreen = '/chat-screen';
+  static const String profileScreen = '/profile-screen';
+  static const all = <String>{
     signInScreen,
     signUpScreen,
     homeScreen,
@@ -29,81 +28,46 @@ abstract class Routes {
 
 class Router extends RouterBase {
   @override
-  Set<String> get allRoutes => Routes.all;
-
-  @Deprecated('call ExtendedNavigator.ofRouter<Router>() directly')
-  static ExtendedNavigatorState get navigator =>
-      ExtendedNavigator.ofRouter<Router>();
-
+  List<RouteDef> get routes => _routes;
+  final _routes = <RouteDef>[
+    RouteDef(Routes.signInScreen, page: SignInScreen),
+    RouteDef(Routes.signUpScreen, page: SignUpScreen),
+    RouteDef(Routes.homeScreen, page: HomeScreen),
+    RouteDef(Routes.chatScreen, page: ChatScreen),
+    RouteDef(Routes.profileScreen, page: ProfileScreen),
+  ];
   @override
-  Route<dynamic> onGenerateRoute(RouteSettings settings) {
-    final args = settings.arguments;
-    switch (settings.name) {
-      case Routes.signInScreen:
-        if (hasInvalidArgs<SignInScreenArguments>(args)) {
-          return misTypedArgsRoute<SignInScreenArguments>(args);
-        }
-        final typedArgs =
-            args as SignInScreenArguments ?? SignInScreenArguments();
-        return MaterialPageRoute<dynamic>(
-          builder: (context) =>
-              SignInScreen(key: typedArgs.key).wrappedRoute(context),
-          settings: settings,
-        );
-      case Routes.signUpScreen:
-        return MaterialPageRoute<dynamic>(
-          builder: (context) => SignUpScreen().wrappedRoute(context),
-          settings: settings,
-        );
-      case Routes.homeScreen:
-        if (hasInvalidArgs<HomeScreenArguments>(args)) {
-          return misTypedArgsRoute<HomeScreenArguments>(args);
-        }
-        final typedArgs = args as HomeScreenArguments ?? HomeScreenArguments();
-        return MaterialPageRoute<dynamic>(
-          builder: (context) =>
-              HomeScreen(key: typedArgs.key).wrappedRoute(context),
-          settings: settings,
-        );
-      case Routes.chatScreen:
-        return MaterialPageRoute<dynamic>(
-          builder: (context) => ChatScreen(),
-          settings: settings,
-        );
-      case Routes.profileScreen:
-        if (hasInvalidArgs<ProfileScreenArguments>(args)) {
-          return misTypedArgsRoute<ProfileScreenArguments>(args);
-        }
-        final typedArgs =
-            args as ProfileScreenArguments ?? ProfileScreenArguments();
-        return MaterialPageRoute<dynamic>(
-          builder: (context) => ProfileScreen(key: typedArgs.key),
-          settings: settings,
-        );
-      default:
-        return unknownRoutePage(settings.name);
-    }
-  }
-}
-
-// *************************************************************************
-// Arguments holder classes
-// **************************************************************************
-
-//SignInScreen arguments holder class
-class SignInScreenArguments {
-  final Key key;
-  SignInScreenArguments({this.key});
-}
-
-//HomeScreen arguments holder class
-class HomeScreenArguments {
-  final Key key;
-  HomeScreenArguments({this.key});
-}
-
-//ProfileScreen arguments holder class
-class ProfileScreenArguments {
-  final Key key;
-  ProfileScreenArguments({this.key});
+  Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
+  final _pagesMap = <Type, AutoRouteFactory>{
+    SignInScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const SignInScreen().wrappedRoute(context),
+        settings: data,
+      );
+    },
+    SignUpScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => SignUpScreen().wrappedRoute(context),
+        settings: data,
+      );
+    },
+    HomeScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const HomeScreen().wrappedRoute(context),
+        settings: data,
+      );
+    },
+    ChatScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => ChatScreen(),
+        settings: data,
+      );
+    },
+    ProfileScreen: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const ProfileScreen(),
+        settings: data,
+      );
+    },
+  };
 }

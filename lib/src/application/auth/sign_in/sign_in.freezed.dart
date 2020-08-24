@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: lines_longer_than_80_chars, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'sign_in.dart';
 
@@ -12,6 +12,7 @@ T _$identity<T>(T value) => value;
 class _$SignInRequestFormTearOff {
   const _$SignInRequestFormTearOff();
 
+// ignore: unused_element
   _SignInRequestForm call(
       {@required EmailAddress emailAddress, @required Password password}) {
     return _SignInRequestForm(
@@ -148,16 +149,19 @@ abstract class _SignInRequestForm implements SignInRequestForm {
 class _$SignInFailureTearOff {
   const _$SignInFailureTearOff();
 
+// ignore: unused_element
   SignInNetworkError network(NetworkError networkError) {
     return SignInNetworkError(
       networkError,
     );
   }
 
+// ignore: unused_element
   UnexpectedSignInError unexpected() {
     return const UnexpectedSignInError();
   }
 
+// ignore: unused_element
   InvalidPasswordOrEmailError invalidPasswordOrEmail() {
     return const InvalidPasswordOrEmailError();
   }

@@ -31,7 +31,7 @@ class DependencyInjector {
   static Future<void> _injectInfrastructureLayer() async {
     getIt
       ..registerFactory(() => Dio(BaseOptions(
-          baseUrl: 'http://10.0.2.2:3000/v1/',
+          baseUrl: 'http://192.168.0.109:3000/v1/',
           connectTimeout: 30000,
           sendTimeout: 30000)));
   }

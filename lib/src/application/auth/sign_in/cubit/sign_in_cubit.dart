@@ -16,7 +16,7 @@ class SignInCubit extends Cubit<SignInstate> {
       : assert(authRepository != null),
         _authRepository = authRepository,
         _signInForm = SignInRequestForm.initial(),
-        super(initialState: SignInstate.initial());
+        super(SignInstate.initial());
 
   void onEmailChanged(String email) {
     _signInForm = _signInForm.copyWith(emailAddress: EmailAddress(email));

@@ -17,8 +17,9 @@ class SignUpOptions extends StatelessWidget {
         GestureDetector(
           onTap: () => context.cubit<SignUpCubit>().state.maybeWhen(
                 submitting: () => null,
-                orElse: () => context.navigator.pushReplacementNamed(
+                orElse: () => context.navigator.pushAndRemoveUntil(
                   Routes.signInScreen,
+                  (route) => false,
                 ),
               ),
           child: Padding(

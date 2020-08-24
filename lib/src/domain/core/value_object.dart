@@ -34,4 +34,6 @@ abstract class ValueObject<Failure, T> {
   T getOrCrash() => value.fold((f) => throw UnexpectedValueError(f), id);
 
   T getOrElse(T dflt) => value.getOrElse(() => dflt);
+  
+  Option<T> get valueOrNone => value.fold((l) => none(), some);
 }
